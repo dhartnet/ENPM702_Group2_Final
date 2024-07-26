@@ -1,5 +1,15 @@
 {
   "files.associations": {
     "functional": "cpp"
-  }
+  },
+  "python.autoComplete.extraPaths": [
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages",
+    "/opt/ros/galactic/lib/python3.8/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages",
+    "/opt/ros/galactic/lib/python3.8/site-packages"
+  ]
 }
