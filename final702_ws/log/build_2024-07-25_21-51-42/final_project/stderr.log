@@ -1,0 +1,27 @@
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera1_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:57:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose[m[K’ was not declared in this scope; did you mean ‘[01m[Kpclose[m[K’?
+   57 |     auto x_pos_ = [01;31m[Kpose[m[K.position.x;
+      |                   [01;31m[K^~~~[m[K
+      |                   [32m[Kpclose[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   54 | void RobotTargetClient::camera1_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera2_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:62:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   62 | void RobotTargetClient::camera2_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera3_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:67:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   67 | void RobotTargetClient::camera3_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera4_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:72:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   72 | void RobotTargetClient::camera4_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera5_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:77:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   77 | void RobotTargetClient::camera5_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+make[2]: *** [CMakeFiles/reach_target.dir/build.make:63: CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:112: CMakeFiles/reach_target.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

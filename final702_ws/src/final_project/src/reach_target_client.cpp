@@ -65,6 +65,7 @@ void RobotTargetClient::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
 // }
 
 void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+<<<<<<< Updated upstream
     RCLCPP_INFO(this->get_logger(), "Camera1 callback triggered");
 
     if (msg->part_poses.empty()) {
@@ -103,6 +104,15 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
     // ㄋtore or use the camera center
     next_target_x_ = camera_center_x;
     next_target_y_ = camera_center_y;
+=======
+    RCLCPP_INFO_STREAM(this->get_logger(`), "Camera1");
+    // geometry_msgs::msg::Pose part_poses;
+    // auto part_poses{msg};
+    // mage_msgs::msg::AdvancedLogicalCameraImage part_poses;
+    float x_pos_ = part_poses.x;
+    RCLCPP_INFO_STREAM(this->get_logger(), x_pos_);
+    // Include the logic to retrieve part information
+>>>>>>> Stashed changes
 }
 
 void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
