@@ -1,0 +1,661 @@
+[0.000000] (-) TimerEvent: {}
+[0.000170] (mage_msgs) JobQueued: {'identifier': 'mage_msgs', 'dependencies': OrderedDict()}
+[0.000205] (final_project) JobQueued: {'identifier': 'final_project', 'dependencies': OrderedDict([('mage_msgs', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs')])}
+[0.000230] (mage_msgs) JobStarted: {'identifier': 'mage_msgs'}
+[0.099500] (-) TimerEvent: {}
+[0.184847] (mage_msgs) JobProgress: {'identifier': 'mage_msgs', 'progress': 'cmake'}
+[0.187742] (mage_msgs) JobProgress: {'identifier': 'mage_msgs', 'progress': 'build'}
+[0.191181] (mage_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs', '--', '-j20', '-l20'], 'cwd': '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dustinhartnett'), ('SSH_AGENT_PID', '1575'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/dustinhartnett'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/dustinhartnett'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1377'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'dustinhartnett'), ('JOURNAL_STREAM', '8:48840'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dustinhartnett'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dustinhartnett/.local/bin:/opt/ros/galactic/bin:/home/dustinhartnett/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:@/tmp/.ICE-unix/1613,unix/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:/tmp/.ICE-unix/1613'), ('INVOCATION_ID', '494034c0c6594866bacfbaa5ce414934'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8d53d219_e1d6_43b4_98e0_1f0e2c0c9300'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.10228'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/dustinhartnett/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dustinhartnett/anaconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/opt/ros/galactic')]), 'shell': False}
+[0.199744] (-) TimerEvent: {}
+[0.271212] (mage_msgs) StdoutLine: {'line': b'[  1%] Built target mage_msgs__cpp\n'}
+[0.276625] (mage_msgs) StdoutLine: {'line': b'[ 12%] Built target mage_msgs__rosidl_generator_c\n'}
+[0.299923] (-) TimerEvent: {}
+[0.308731] (mage_msgs) StdoutLine: {'line': b'[ 24%] Built target mage_msgs__rosidl_typesupport_cpp\n'}
+[0.313978] (mage_msgs) StdoutLine: {'line': b'[ 35%] Built target mage_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.320110] (mage_msgs) StdoutLine: {'line': b'[ 47%] Built target mage_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.329127] (mage_msgs) StdoutLine: {'line': b'[ 58%] Built target mage_msgs__rosidl_typesupport_c\n'}
+[0.330033] (mage_msgs) StdoutLine: {'line': b'[ 70%] Built target mage_msgs__rosidl_typesupport_introspection_c\n'}
+[0.361322] (mage_msgs) StdoutLine: {'line': b'[ 81%] Built target mage_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.392496] (mage_msgs) StdoutLine: {'line': b'[ 81%] Built target mage_msgs\n'}
+[0.400174] (-) TimerEvent: {}
+[0.426887] (mage_msgs) StdoutLine: {'line': b'[ 82%] Built target mage_msgs__py\n'}
+[0.466595] (mage_msgs) StdoutLine: {'line': b'[ 93%] Built target mage_msgs__python\n'}
+[0.500346] (-) TimerEvent: {}
+[0.508779] (mage_msgs) StdoutLine: {'line': b'[100%] Built target mage_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.509644] (mage_msgs) StdoutLine: {'line': b'[100%] Built target mage_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.510109] (mage_msgs) StdoutLine: {'line': b'[100%] Built target mage_msgs__rosidl_typesupport_c__pyext\n'}
+[0.527449] (mage_msgs) CommandEnded: {'returncode': 0}
+[0.600865] (-) TimerEvent: {}
+[0.701887] (-) TimerEvent: {}
+[0.727266] (mage_msgs) JobProgress: {'identifier': 'mage_msgs', 'progress': 'install'}
+[0.742413] (mage_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs'], 'cwd': '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dustinhartnett'), ('SSH_AGENT_PID', '1575'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/dustinhartnett'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/dustinhartnett'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1377'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'dustinhartnett'), ('JOURNAL_STREAM', '8:48840'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dustinhartnett'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dustinhartnett/.local/bin:/opt/ros/galactic/bin:/home/dustinhartnett/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:@/tmp/.ICE-unix/1613,unix/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:/tmp/.ICE-unix/1613'), ('INVOCATION_ID', '494034c0c6594866bacfbaa5ce414934'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8d53d219_e1d6_43b4_98e0_1f0e2c0c9300'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.10228'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/dustinhartnett/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dustinhartnett/anaconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/opt/ros/galactic')]), 'shell': False}
+[0.754458] (mage_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.755120] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/ament_index/resource_index/rosidl_interfaces/mage_msgs\n'}
+[0.755410] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs\n'}
+[0.755478] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg\n'}
+[0.755540] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/part_pose.h\n'}
+[0.755621] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/marker_array.h\n'}
+[0.755677] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/part.h\n'}
+[0.755735] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.755812] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/sensors.h\n'}
+[0.755863] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail\n'}
+[0.755914] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__type_support.h\n'}
+[0.756006] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__struct.h\n'}
+[0.756063] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__functions.c\n'}
+[0.756117] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__type_support.h\n'}
+[0.756169] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__functions.h\n'}
+[0.756225] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__functions.h\n'}
+[0.756346] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__struct.h\n'}
+[0.756399] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__functions.h\n'}
+[0.756456] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__functions.c\n'}
+[0.756507] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__type_support.h\n'}
+[0.756559] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__functions.c\n'}
+[0.756613] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__functions.h\n'}
+[0.756668] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__struct.h\n'}
+[0.756741] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__functions.h\n'}
+[0.756816] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__type_support.h\n'}
+[0.756870] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__functions.c\n'}
+[0.756923] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__struct.h\n'}
+[0.756993] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__type_support.h\n'}
+[0.757047] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__struct.h\n'}
+[0.757101] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__functions.c\n'}
+[0.757154] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__struct.h\n'}
+[0.757238] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__functions.c\n'}
+[0.757321] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__functions.h\n'}
+[0.757375] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__type_support.h\n'}
+[0.757428] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__functions.c\n'}
+[0.757478] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__struct.h\n'}
+[0.757530] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__type_support.h\n'}
+[0.757585] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__functions.h\n'}
+[0.757640] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/advanced_logical_camera_image.h\n'}
+[0.757694] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/marker.h\n'}
+[0.757748] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/new_coordinates.h\n'}
+[0.757817] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action\n'}
+[0.757953] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail\n'}
+[0.758006] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__functions.h\n'}
+[0.758062] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__struct.h\n'}
+[0.758119] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__functions.c\n'}
+[0.758188] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__type_support.h\n'}
+[0.758239] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/robot_target.h\n'}
+[0.758290] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/library_path.sh\n'}
+[0.758339] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/library_path.dsv\n'}
+[0.758560] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_generator_c.so\n'}
+[0.758714] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs\n'}
+[0.758784] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg\n'}
+[0.758843] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.758902] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail\n'}
+[0.758957] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759017] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759076] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759132] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759187] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759245] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759320] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759376] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action\n'}
+[0.759518] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail\n'}
+[0.759576] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__rosidl_typesupport_fastrtps_c.h\n'}
+[0.759632] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.760201] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs\n'}
+[0.760303] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg\n'}
+[0.760403] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail\n'}
+[0.760509] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.760589] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.760688] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.760761] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.760832] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.760902] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.760999] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/dds_fastrtps\n'}
+[0.761072] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.761151] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.761221] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action\n'}
+[0.761317] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail\n'}
+[0.761383] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.761446] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/dds_fastrtps\n'}
+[0.761508] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.761568] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs\n'}
+[0.761627] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg\n'}
+[0.761685] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.761749] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail\n'}
+[0.761811] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__rosidl_typesupport_introspection_c.h\n'}
+[0.761875] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__rosidl_typesupport_introspection_c.h\n'}
+[0.761936] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__type_support.c\n'}
+[0.762004] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__type_support.c\n'}
+[0.762063] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.762123] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__rosidl_typesupport_introspection_c.h\n'}
+[0.762179] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__type_support.c\n'}
+[0.762236] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__rosidl_typesupport_introspection_c.h\n'}
+[0.762293] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__type_support.c\n'}
+[0.762349] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__type_support.c\n'}
+[0.762406] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__rosidl_typesupport_introspection_c.h\n'}
+[0.762459] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__type_support.c\n'}
+[0.762513] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__rosidl_typesupport_introspection_c.h\n'}
+[0.762578] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__type_support.c\n'}
+[0.762631] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action\n'}
+[0.762688] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail\n'}
+[0.762741] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__type_support.c\n'}
+[0.762799] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__rosidl_typesupport_introspection_c.h\n'}
+[0.762857] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.762916] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_typesupport_c.so\n'}
+[0.762969] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs\n'}
+[0.763025] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg\n'}
+[0.763087] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/marker_array.hpp\n'}
+[0.763142] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/marker.hpp\n'}
+[0.763194] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/new_coordinates.hpp\n'}
+[0.763248] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/sensors.hpp\n'}
+[0.763301] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/part_pose.hpp\n'}
+[0.763362] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail\n'}
+[0.763416] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__traits.hpp\n'}
+[0.763466] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__struct.hpp\n'}
+[0.763521] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__struct.hpp\n'}
+[0.763571] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__traits.hpp\n'}
+[0.763622] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__struct.hpp\n'}
+[0.763673] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__traits.hpp\n'}
+[0.763724] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__builder.hpp\n'}
+[0.763776] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__traits.hpp\n'}
+[0.763825] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__builder.hpp\n'}
+[0.763878] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__builder.hpp\n'}
+[0.763931] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__struct.hpp\n'}
+[0.763985] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__struct.hpp\n'}
+[0.764047] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__struct.hpp\n'}
+[0.764100] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__builder.hpp\n'}
+[0.764161] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__struct.hpp\n'}
+[0.764218] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__builder.hpp\n'}
+[0.764275] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__builder.hpp\n'}
+[0.764327] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__builder.hpp\n'}
+[0.764377] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__traits.hpp\n'}
+[0.764429] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__traits.hpp\n'}
+[0.764504] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__traits.hpp\n'}
+[0.764562] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/advanced_logical_camera_image.hpp\n'}
+[0.764618] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/part.hpp\n'}
+[0.764670] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action\n'}
+[0.764725] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/robot_target.hpp\n'}
+[0.764779] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail\n'}
+[0.764831] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__struct.hpp\n'}
+[0.764884] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__traits.hpp\n'}
+[0.764933] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__builder.hpp\n'}
+[0.764981] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs\n'}
+[0.765030] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg\n'}
+[0.765081] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail\n'}
+[0.765129] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765176] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765226] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765278] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__type_support.cpp\n'}
+[0.765326] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/new_coordinates__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765375] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__type_support.cpp\n'}
+[0.765422] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__type_support.cpp\n'}
+[0.765474] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part__type_support.cpp\n'}
+[0.765523] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/advanced_logical_camera_image__type_support.cpp\n'}
+[0.765571] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/sensors__type_support.cpp\n'}
+[0.765619] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__type_support.cpp\n'}
+[0.765667] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765716] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/marker_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765766] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/msg/detail/part_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765816] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action\n'}
+[0.765867] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail\n'}
+[0.765918] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.765969] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/include/mage_msgs/action/detail/robot_target__type_support.cpp\n'}
+[0.766020] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.766071] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__rosidl_typesupport_cpp.so\n'}
+[0.766123] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/pythonpath.sh\n'}
+[0.766173] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/pythonpath.dsv\n'}
+[0.766227] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/__init__.py\n'}
+[0.802212] (-) TimerEvent: {}
+[0.807667] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg\n'}
+[0.808480] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_new_coordinates_s.c\n'}
+[0.808975] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_part_s.c\n'}
+[0.809368] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_marker_s.c\n'}
+[0.809824] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_part_pose.py\n'}
+[0.810188] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_sensors_s.c\n'}
+[0.810537] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_advanced_logical_camera_image_s.c\n'}
+[0.810882] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_part.py\n'}
+[0.811229] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_marker_array_s.c\n'}
+[0.811681] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_part_pose_s.c\n'}
+[0.812042] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_sensors.py\n'}
+[0.812388] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/__init__.py\n'}
+[0.812791] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_advanced_logical_camera_image.py\n'}
+[0.813156] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_marker.py\n'}
+[0.813518] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_marker_array.py\n'}
+[0.813915] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/msg/_new_coordinates.py\n'}
+[0.814362] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/action\n'}
+[0.814726] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/action/_robot_target_s.c\n'}
+[0.815126] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/action/_robot_target.py\n'}
+[0.815494] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/action/__init__.py\n'}
+[0.815852] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/mage_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.816204] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/mage_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.817407] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages/mage_msgs/mage_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.819333] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/libmage_msgs__python.so\n'}
+[0.820277] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/AdvancedLogicalCameraImage.idl\n'}
+[0.821359] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/Part.idl\n'}
+[0.822291] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/PartPose.idl\n'}
+[0.822841] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/Sensors.idl\n'}
+[0.823310] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/Marker.idl\n'}
+[0.823748] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/MarkerArray.idl\n'}
+[0.824188] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/NewCoordinates.idl\n'}
+[0.824643] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/action/RobotTarget.idl\n'}
+[0.825311] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/AdvancedLogicalCameraImage.msg\n'}
+[0.825831] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/Part.msg\n'}
+[0.826229] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/PartPose.msg\n'}
+[0.826651] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/Sensors.msg\n'}
+[0.827033] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/Marker.msg\n'}
+[0.827379] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/MarkerArray.msg\n'}
+[0.827738] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/msg/NewCoordinates.msg\n'}
+[0.828132] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/action/RobotTarget.action\n'}
+[0.828496] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/ament_index/resource_index/package_run_dependencies/mage_msgs\n'}
+[0.828834] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/ament_index/resource_index/parent_prefix_path/mage_msgs\n'}
+[0.828973] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/ament_prefix_path.sh\n'}
+[0.829041] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/ament_prefix_path.dsv\n'}
+[0.829096] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/path.sh\n'}
+[0.829149] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/environment/path.dsv\n'}
+[0.829200] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/local_setup.bash\n'}
+[0.829251] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/local_setup.sh\n'}
+[0.829301] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/local_setup.zsh\n'}
+[0.829352] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/local_setup.dsv\n'}
+[0.829402] (mage_msgs) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/package.dsv\n'}
+[0.829451] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/ament_index/resource_index/packages/mage_msgs\n'}
+[0.829501] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_generator_cExport.cmake\n'}
+[0.829549] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.829762] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.829922] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.830742] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.830897] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.831706] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.832381] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.832607] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.833377] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.833562] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.833815] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.834170] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.834455] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.834634] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.834972] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.835135] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.835441] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.835726] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgsConfig.cmake\n'}
+[0.835993] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/cmake/mage_msgsConfig-version.cmake\n'}
+[0.836204] (mage_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/share/mage_msgs/package.xml\n'}
+[0.843784] (mage_msgs) CommandEnded: {'returncode': 0}
+[0.902483] (-) TimerEvent: {}
+[1.004900] (-) TimerEvent: {}
+[1.107513] (-) TimerEvent: {}
+[1.209891] (-) TimerEvent: {}
+[1.315664] (-) TimerEvent: {}
+[1.419003] (-) TimerEvent: {}
+[1.516976] (mage_msgs) JobEnded: {'identifier': 'mage_msgs', 'rc': 0}
+[1.522646] (-) TimerEvent: {}
+[1.523898] (final_project) JobStarted: {'identifier': 'final_project'}
+[1.623203] (-) TimerEvent: {}
+[1.710078] (final_project) JobProgress: {'identifier': 'final_project', 'progress': 'cmake'}
+[1.713900] (final_project) JobProgress: {'identifier': 'final_project', 'progress': 'build'}
+[1.714062] (final_project) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project', '--', '-j20', '-l20'], 'cwd': '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dustinhartnett'), ('SSH_AGENT_PID', '1575'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/dustinhartnett'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/dustinhartnett'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1377'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'dustinhartnett'), ('JOURNAL_STREAM', '8:48840'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dustinhartnett'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dustinhartnett/.local/bin:/opt/ros/galactic/bin:/home/dustinhartnett/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:@/tmp/.ICE-unix/1613,unix/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:/tmp/.ICE-unix/1613'), ('INVOCATION_ID', '494034c0c6594866bacfbaa5ce414934'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8d53d219_e1d6_43b4_98e0_1f0e2c0c9300'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.10228'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/dustinhartnett/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dustinhartnett/anaconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic')]), 'shell': False}
+[1.723425] (-) TimerEvent: {}
+[1.774518] (final_project) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target reach_target\x1b[0m\n'}
+[1.794676] (final_project) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_final_project\n'}
+[1.817104] (final_project) StdoutLine: {'line': b'[ 50%] Built target AriacLogicalCameraPlugin\n'}
+[1.818926] (final_project) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o\x1b[0m\n'}
+[1.823584] (-) TimerEvent: {}
+[1.924149] (-) TimerEvent: {}
+[2.024932] (-) TimerEvent: {}
+[2.043030] (final_project) StdoutLine: {'line': b'running install_scripts\n'}
+[2.045828] (final_project) StdoutLine: {'line': b'running egg_info\n'}
+[2.046404] (final_project) StdoutLine: {'line': b'writing final_project.egg-info/PKG-INFO\n'}
+[2.046766] (final_project) StdoutLine: {'line': b'writing dependency_links to final_project.egg-info/dependency_links.txt\n'}
+[2.047025] (final_project) StdoutLine: {'line': b'writing top-level names to final_project.egg-info/top_level.txt\n'}
+[2.072206] (final_project) StdoutLine: {'line': b'running egg_info\n'}
+[2.074357] (final_project) StdoutLine: {'line': b'writing final_project.egg-info/PKG-INFO\n'}
+[2.075513] (final_project) StdoutLine: {'line': b'writing dependency_links to final_project.egg-info/dependency_links.txt\n'}
+[2.076137] (final_project) StdoutLine: {'line': b'writing top-level names to final_project.egg-info/top_level.txt\n'}
+[2.088412] (final_project) StdoutLine: {'line': b"reading manifest file 'final_project.egg-info/SOURCES.txt'\n"}
+[2.089733] (final_project) StdoutLine: {'line': b"writing manifest file 'final_project.egg-info/SOURCES.txt'\n"}
+[2.111505] (final_project) StdoutLine: {'line': b"reading manifest file 'final_project.egg-info/SOURCES.txt'\n"}
+[2.113025] (final_project) StdoutLine: {'line': b"writing manifest file 'final_project.egg-info/SOURCES.txt'\n"}
+[2.121506] (final_project) StdoutLine: {'line': b'[ 75%] Built target ament_cmake_python_build_final_project_egg\n'}
+[2.125252] (-) TimerEvent: {}
+[2.146327] (final_project) StdoutLine: {'line': b'[ 75%] Built target ament_cmake_python_build_final_project_scripts\n'}
+[2.225803] (-) TimerEvent: {}
+[2.327164] (-) TimerEvent: {}
+[2.428384] (-) TimerEvent: {}
+[2.529556] (-) TimerEvent: {}
+[2.630602] (-) TimerEvent: {}
+[2.731722] (-) TimerEvent: {}
+[2.832772] (-) TimerEvent: {}
+[2.933163] (-) TimerEvent: {}
+[3.033484] (-) TimerEvent: {}
+[3.134007] (-) TimerEvent: {}
+[3.235229] (-) TimerEvent: {}
+[3.336581] (-) TimerEvent: {}
+[3.438016] (-) TimerEvent: {}
+[3.539107] (-) TimerEvent: {}
+[3.640481] (-) TimerEvent: {}
+[3.741538] (-) TimerEvent: {}
+[3.841957] (-) TimerEvent: {}
+[3.942319] (-) TimerEvent: {}
+[4.042918] (-) TimerEvent: {}
+[4.143714] (-) TimerEvent: {}
+[4.217984] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotTargetClient::camera1_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.218243] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:102:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.218390] (final_project) StderrLine: {'line': b'   54 | ack(\x1b[01;35m\x1b[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[4.218451] (final_project) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.218504] (final_project) StderrLine: {'line': b'\n'}
+[4.218558] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotTargetClient::camera2_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.218615] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:62:102:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.218669] (final_project) StderrLine: {'line': b'   62 | ack(\x1b[01;35m\x1b[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[4.218719] (final_project) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.218769] (final_project) StderrLine: {'line': b'\n'}
+[4.218958] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotTargetClient::camera3_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.219023] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:67:102:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.219079] (final_project) StderrLine: {'line': b'   67 | ack(\x1b[01;35m\x1b[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[4.219131] (final_project) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.219179] (final_project) StderrLine: {'line': b'\n'}
+[4.219667] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotTargetClient::camera4_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.219814] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:72:102:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.219883] (final_project) StderrLine: {'line': b'   72 | ack(\x1b[01;35m\x1b[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[4.219950] (final_project) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.220022] (final_project) StderrLine: {'line': b'\n'}
+[4.220141] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotTargetClient::camera5_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.220208] (final_project) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:77:102:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.220261] (final_project) StderrLine: {'line': b'   77 | ack(\x1b[01;35m\x1b[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[4.220312] (final_project) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.220361] (final_project) StderrLine: {'line': b'\n'}
+[4.243948] (-) TimerEvent: {}
+[4.344473] (-) TimerEvent: {}
+[4.444837] (-) TimerEvent: {}
+[4.545188] (-) TimerEvent: {}
+[4.645568] (-) TimerEvent: {}
+[4.745963] (-) TimerEvent: {}
+[4.846480] (-) TimerEvent: {}
+[4.947303] (-) TimerEvent: {}
+[5.047614] (-) TimerEvent: {}
+[5.148037] (-) TimerEvent: {}
+[5.248501] (-) TimerEvent: {}
+[5.349005] (-) TimerEvent: {}
+[5.450117] (-) TimerEvent: {}
+[5.551239] (-) TimerEvent: {}
+[5.652343] (-) TimerEvent: {}
+[5.753677] (-) TimerEvent: {}
+[5.855022] (-) TimerEvent: {}
+[5.956495] (-) TimerEvent: {}
+[6.057971] (-) TimerEvent: {}
+[6.159335] (-) TimerEvent: {}
+[6.260611] (-) TimerEvent: {}
+[6.361862] (-) TimerEvent: {}
+[6.463231] (-) TimerEvent: {}
+[6.564558] (-) TimerEvent: {}
+[6.665598] (-) TimerEvent: {}
+[6.766669] (-) TimerEvent: {}
+[6.867859] (-) TimerEvent: {}
+[6.969106] (-) TimerEvent: {}
+[7.070613] (-) TimerEvent: {}
+[7.171609] (-) TimerEvent: {}
+[7.272736] (-) TimerEvent: {}
+[7.373985] (-) TimerEvent: {}
+[7.475101] (-) TimerEvent: {}
+[7.576173] (-) TimerEvent: {}
+[7.677591] (-) TimerEvent: {}
+[7.778953] (-) TimerEvent: {}
+[7.880092] (-) TimerEvent: {}
+[7.981198] (-) TimerEvent: {}
+[8.082525] (-) TimerEvent: {}
+[8.183458] (-) TimerEvent: {}
+[8.284709] (-) TimerEvent: {}
+[8.385477] (-) TimerEvent: {}
+[8.486079] (-) TimerEvent: {}
+[8.586545] (-) TimerEvent: {}
+[8.686965] (-) TimerEvent: {}
+[8.787306] (-) TimerEvent: {}
+[8.887745] (-) TimerEvent: {}
+[8.988154] (-) TimerEvent: {}
+[9.088587] (-) TimerEvent: {}
+[9.188939] (-) TimerEvent: {}
+[9.289377] (-) TimerEvent: {}
+[9.389856] (-) TimerEvent: {}
+[9.490739] (-) TimerEvent: {}
+[9.591512] (-) TimerEvent: {}
+[9.692088] (-) TimerEvent: {}
+[9.792569] (-) TimerEvent: {}
+[9.892917] (-) TimerEvent: {}
+[9.993471] (-) TimerEvent: {}
+[10.094753] (-) TimerEvent: {}
+[10.195791] (-) TimerEvent: {}
+[10.296910] (-) TimerEvent: {}
+[10.397418] (-) TimerEvent: {}
+[10.497929] (-) TimerEvent: {}
+[10.598286] (-) TimerEvent: {}
+[10.698740] (-) TimerEvent: {}
+[10.799225] (-) TimerEvent: {}
+[10.899586] (-) TimerEvent: {}
+[10.999910] (-) TimerEvent: {}
+[11.100313] (-) TimerEvent: {}
+[11.200649] (-) TimerEvent: {}
+[11.301095] (-) TimerEvent: {}
+[11.401445] (-) TimerEvent: {}
+[11.501779] (-) TimerEvent: {}
+[11.602229] (-) TimerEvent: {}
+[11.702841] (-) TimerEvent: {}
+[11.803278] (-) TimerEvent: {}
+[11.903723] (-) TimerEvent: {}
+[12.004036] (-) TimerEvent: {}
+[12.104496] (-) TimerEvent: {}
+[12.204945] (-) TimerEvent: {}
+[12.305362] (-) TimerEvent: {}
+[12.405833] (-) TimerEvent: {}
+[12.506200] (-) TimerEvent: {}
+[12.606648] (-) TimerEvent: {}
+[12.707174] (-) TimerEvent: {}
+[12.807550] (-) TimerEvent: {}
+[12.907910] (-) TimerEvent: {}
+[13.008341] (-) TimerEvent: {}
+[13.108698] (-) TimerEvent: {}
+[13.209213] (-) TimerEvent: {}
+[13.310307] (-) TimerEvent: {}
+[13.411416] (-) TimerEvent: {}
+[13.512530] (-) TimerEvent: {}
+[13.613514] (-) TimerEvent: {}
+[13.714271] (-) TimerEvent: {}
+[13.814646] (-) TimerEvent: {}
+[13.915072] (-) TimerEvent: {}
+[14.015415] (-) TimerEvent: {}
+[14.115784] (-) TimerEvent: {}
+[14.216257] (-) TimerEvent: {}
+[14.316896] (-) TimerEvent: {}
+[14.418326] (-) TimerEvent: {}
+[14.519819] (-) TimerEvent: {}
+[14.621107] (-) TimerEvent: {}
+[14.624548] (final_project) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable reach_target\x1b[0m\n'}
+[14.721587] (-) TimerEvent: {}
+[14.823146] (-) TimerEvent: {}
+[14.924773] (-) TimerEvent: {}
+[15.025837] (-) TimerEvent: {}
+[15.126791] (-) TimerEvent: {}
+[15.227785] (-) TimerEvent: {}
+[15.328972] (-) TimerEvent: {}
+[15.429859] (-) TimerEvent: {}
+[15.530867] (-) TimerEvent: {}
+[15.631674] (-) TimerEvent: {}
+[15.732638] (-) TimerEvent: {}
+[15.833499] (-) TimerEvent: {}
+[15.934573] (-) TimerEvent: {}
+[16.035633] (-) TimerEvent: {}
+[16.136756] (-) TimerEvent: {}
+[16.237587] (-) TimerEvent: {}
+[16.338027] (-) TimerEvent: {}
+[16.438800] (-) TimerEvent: {}
+[16.539621] (-) TimerEvent: {}
+[16.640411] (-) TimerEvent: {}
+[16.741132] (-) TimerEvent: {}
+[16.842377] (-) TimerEvent: {}
+[16.943599] (-) TimerEvent: {}
+[17.044540] (-) TimerEvent: {}
+[17.145463] (-) TimerEvent: {}
+[17.246279] (-) TimerEvent: {}
+[17.346808] (-) TimerEvent: {}
+[17.447226] (-) TimerEvent: {}
+[17.547811] (-) TimerEvent: {}
+[17.648669] (-) TimerEvent: {}
+[17.700083] (final_project) StdoutLine: {'line': b'[100%] Built target reach_target\n'}
+[17.715541] (final_project) CommandEnded: {'returncode': 0}
+[17.747578] (final_project) JobProgress: {'identifier': 'final_project', 'progress': 'install'}
+[17.748339] (final_project) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project'], 'cwd': '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dustinhartnett'), ('SSH_AGENT_PID', '1575'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/dustinhartnett'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/dustinhartnett'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1377'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'dustinhartnett'), ('JOURNAL_STREAM', '8:48840'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dustinhartnett'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dustinhartnett/.local/bin:/opt/ros/galactic/bin:/home/dustinhartnett/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:@/tmp/.ICE-unix/1613,unix/dustinhartnett-HP-Spectre-x360-2-in-1-Laptop-16-f1xxx:/tmp/.ICE-unix/1613'), ('INVOCATION_ID', '494034c0c6594866bacfbaa5ce414934'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8d53d219_e1d6_43b4_98e0_1f0e2c0c9300'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.10228'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/dustinhartnett/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dustinhartnett/anaconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic')]), 'shell': False}
+[17.749201] (-) TimerEvent: {}
+[17.762704] (final_project) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.763117] (final_project) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/reach_target\n'}
+[17.767722] (final_project) StdoutLine: {'line': b'-- Set runtime path of "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/reach_target" to ""\n'}
+[17.767988] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/library_path.sh\n'}
+[17.768050] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/library_path.dsv\n'}
+[17.768221] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include\n'}
+[17.768276] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project\n'}
+[17.768331] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project/ariac_logical_camera_plugin.hpp\n'}
+[17.768386] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project/disable_shadows_plugin.hpp\n'}
+[17.768438] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project/reach_target_action.hpp\n'}
+[17.768937] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/libAriacLogicalCameraPlugin.so\n'}
+[17.769192] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config\n'}
+[17.769415] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config/waypoint_params.yaml\n'}
+[17.769478] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config/sensors.yaml\n'}
+[17.769534] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config/frame.rviz\n'}
+[17.769586] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch\n'}
+[17.769637] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch/robot_state_publisher.launch.py\n'}
+[17.769685] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch/spawn_turtlebot3.launch.py\n'}
+[17.769838] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch/final_project.launch.py\n'}
+[17.769902] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models\n'}
+[17.769957] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2\n'}
+[17.770150] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes\n'}
+[17.770204] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/box_pallet.dae\n'}
+[17.770394] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/AM200_029_05_Diffuse.jpg\n'}
+[17.770580] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/AM200_029_06_Diffuse.jpg\n'}
+[17.770699] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/AM200_029_01_Diffuse.jpg\n'}
+[17.770808] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/model.sdf\n'}
+[17.770918] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/model.config\n'}
+[17.771024] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3\n'}
+[17.771131] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes\n'}
+[17.771239] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_03_Diffuse.jpg\n'}
+[17.771345] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/box_pallet.dae\n'}
+[17.771454] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_04_Diffuse.jpg\n'}
+[17.771568] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_01_Diffuse.jpg\n'}
+[17.771682] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_08_Diffuse.jpg\n'}
+[17.771796] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/model.sdf\n'}
+[17.771914] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/model.config\n'}
+[17.772034] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets\n'}
+[17.772170] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes\n'}
+[17.772287] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/box_pallet.dae\n'}
+[17.772407] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/AM200_029_07_Diffuse.jpg\n'}
+[17.772561] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/AM200_029_02_Diffuse.jpg\n'}
+[17.772693] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/AM200_029_01_Diffuse.jpg\n'}
+[17.772821] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/model.sdf\n'}
+[17.772937] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/model.config\n'}
+[17.773046] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2\n'}
+[17.773164] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/model.sdf\n'}
+[17.773275] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials\n'}
+[17.773383] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures\n'}
+[17.773493] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/marker_2.png\n'}
+[17.773600] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/5x5_1000-2.png\n'}
+[17.773707] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/svgtopng.zip\n'}
+[17.773814] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/5x5_1000-2.svg\n'}
+[17.773927] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/scripts\n'}
+[17.774040] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/scripts/marker.material\n'}
+[17.774152] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/model.config\n'}
+[17.774269] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0\n'}
+[17.774376] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/model.sdf\n'}
+[17.774481] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials\n'}
+[17.774584] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures\n'}
+[17.774688] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/marker_0_old.png\n'}
+[17.774791] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/svgtopng.zip\n'}
+[17.774893] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/5x5_1000-0.svg\n'}
+[17.774996] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/5x5_1000-0.png\n'}
+[17.775098] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/scripts\n'}
+[17.775201] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/scripts/marker.material\n'}
+[17.775302] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/model.config\n'}
+[17.775405] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera\n'}
+[17.775511] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/meshes\n'}
+[17.775619] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/meshes/camera.dae\n'}
+[17.775723] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/model.sdf\n'}
+[17.775824] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/materials\n'}
+[17.775930] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/materials/textures\n'}
+[17.776032] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/materials/textures/camera.png\n'}
+[17.776145] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/model.config\n'}
+[17.776250] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor\n'}
+[17.776353] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes\n'}
+[17.776585] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/example-2.png\n'}
+[17.776734] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/floor.dae\n'}
+[17.776793] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/Suede_Blue.jpg\n'}
+[17.776843] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/Suede_Blue_1.jpg\n'}
+[17.776891] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/model.sdf\n'}
+[17.776938] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/model.config\n'}
+[17.776985] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery\n'}
+[17.777031] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes\n'}
+[17.777078] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_base.stl\n'}
+[17.777123] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_cap.stl\n'}
+[17.777168] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_collision.stl\n'}
+[17.777214] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_pins.stl\n'}
+[17.777260] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/model.sdf\n'}
+[17.777306] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/model.config\n'}
+[17.777352] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin\n'}
+[17.777405] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes\n'}
+[17.777453] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/bin_exterior.dae\n'}
+[17.777501] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/bin_interior.stl\n'}
+[17.777549] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/Steel_Brushed_Stainless.jpg.001.jpg\n'}
+[17.777594] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/Metal_Rough.jpg.001.jpg\n'}
+[17.777641] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/bin_exterior.stl\n'}
+[17.777686] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/model.sdf\n'}
+[17.777731] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/model.config\n'}
+[17.777778] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1\n'}
+[17.777823] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/model.sdf\n'}
+[17.777869] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials\n'}
+[17.777913] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures\n'}
+[17.777958] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/svgtopng.zip\n'}
+[17.778000] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/5x5_1000-1.png\n'}
+[17.778045] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/marker_1.png\n'}
+[17.778090] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/5x5_1000-1.svg\n'}
+[17.778138] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/scripts\n'}
+[17.778182] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/scripts/marker.material\n'}
+[17.778228] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/model.config\n'}
+[17.778275] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle\n'}
+[17.778319] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle/model-1_4.sdf\n'}
+[17.778369] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle/model.sdf\n'}
+[17.778419] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle/model.config\n'}
+[17.778468] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds\n'}
+[17.778515] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds/final_summer_702.world\n'}
+[17.778559] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds/enpm605.world\n'}
+[17.778606] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds/final.world\n'}
+[17.778654] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/pythonpath.sh\n'}
+[17.778698] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/pythonpath.dsv\n'}
+[17.778743] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info\n'}
+[17.778789] (final_project) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/SOURCES.txt\n'}
+[17.778834] (final_project) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/top_level.txt\n'}
+[17.778879] (final_project) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/dependency_links.txt\n'}
+[17.778923] (final_project) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/PKG-INFO\n'}
+[17.778969] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/\n'}
+[17.779014] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project\n'}
+[17.779059] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/tf_broadcaster.py\n'}
+[17.779102] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/spawn_params.py\n'}
+[17.779150] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/environment_startup.py\n'}
+[17.779193] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/utilities.py\n'}
+[17.779235] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/tf2_geometry_msgs.py\n'}
+[17.779279] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/__init__.py\n'}
+[17.803059] (final_project) StdoutLine: {'line': b"Listing '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project'...\n"}
+[17.811463] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/environment_startup_node.py\n'}
+[17.812003] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/sensor_tf_broadcaster.py\n'}
+[17.812272] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/part_spawner.py\n'}
+[17.812396] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/object_tf_broadcaster.py\n'}
+[17.812597] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/robot_target_interface.py\n'}
+[17.812720] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/ament_index/resource_index/package_run_dependencies/final_project\n'}
+[17.812778] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/ament_index/resource_index/parent_prefix_path/final_project\n'}
+[17.812829] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/ament_prefix_path.sh\n'}
+[17.812876] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/ament_prefix_path.dsv\n'}
+[17.812923] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/path.sh\n'}
+[17.812982] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/path.dsv\n'}
+[17.813027] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.bash\n'}
+[17.813073] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.sh\n'}
+[17.813121] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.zsh\n'}
+[17.813166] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.dsv\n'}
+[17.813213] (final_project) StdoutLine: {'line': b'-- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/package.dsv\n'}
+[17.813256] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/ament_index/resource_index/packages/final_project\n'}
+[17.813300] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[17.813348] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/cmake/final_projectConfig.cmake\n'}
+[17.813394] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/cmake/final_projectConfig-version.cmake\n'}
+[17.813440] (final_project) StdoutLine: {'line': b'-- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/package.xml\n'}
+[17.814759] (final_project) CommandEnded: {'returncode': 0}
+[17.849854] (-) TimerEvent: {}
+[17.951227] (-) TimerEvent: {}
+[18.052081] (-) TimerEvent: {}
+[18.153258] (-) TimerEvent: {}
+[18.242764] (final_project) JobEnded: {'identifier': 'final_project', 'rc': 0}
+[18.243158] (-) EventReactorShutdown: {}

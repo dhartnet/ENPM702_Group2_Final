@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from mage_msgs/action/RobotTarget.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module mage_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      " RobotTarget.action")
+    struct RobotTarget_Goal {
+      @verbatim (language="comment", text=
+        " Define the goal message")
+      geometry_msgs::msg::Point target;
+    };
+    struct RobotTarget_Result {
+      @verbatim (language="comment", text=
+        " Define the result message")
+      boolean success;
+
+      string message;
+    };
+    struct RobotTarget_Feedback {
+      @verbatim (language="comment", text=
+        " Define the feedback message")
+      double distance_to_goal;
+    };
+  };
+};

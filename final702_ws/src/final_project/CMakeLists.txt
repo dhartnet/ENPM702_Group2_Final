@@ -68,14 +68,14 @@ ament_export_libraries(AriacLogicalCameraPlugin)
 
 
 # Disable Shadows Plugin
-add_library(disable_shadows_plugin SHARED
-  src/disable_shadows_plugin.cpp
-)
-target_include_directories(disable_shadows_plugin PUBLIC include)
-ament_target_dependencies(disable_shadows_plugin
-  "gazebo_ros"
-)
-ament_export_libraries(disable_shadows_plugin)
+# add_library(disable_shadows_plugin SHARED
+#   src/disable_shadows_plugin.cpp
+# )
+# target_include_directories(disable_shadows_plugin PUBLIC include)
+# ament_target_dependencies(disable_shadows_plugin
+#   "gazebo_ros"
+# )
+# ament_export_libraries(disable_shadows_plugin)
 
 
 install(DIRECTORY include/
@@ -83,7 +83,7 @@ install(DIRECTORY include/
 
 install(TARGETS
     AriacLogicalCameraPlugin
-    disable_shadows_plugin
+    # disable_shadows_plugin
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)

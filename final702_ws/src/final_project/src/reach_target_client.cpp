@@ -53,6 +53,29 @@ void RobotTargetClient::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
 
 void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
     RCLCPP_INFO_STREAM(this->get_logger(), "Camera1");
+    geometry_msgs::msg::Pose pose;
+    auto x_pos_ = pose.position.x;
+    RCLCPP_INFO_STREAM(this->get_logger(), x_pos_);
+    // Include the logic to retrieve part information
+}
+
+void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+    RCLCPP_INFO_STREAM(this->get_logger(), "Camera2");
+    // Include the logic to retrieve part information
+}
+
+void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+    RCLCPP_INFO_STREAM(this->get_logger(), "Camera3");
+    // Include the logic to retrieve part information
+}
+
+void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+    RCLCPP_INFO_STREAM(this->get_logger(), "Camera4");
+    // Include the logic to retrieve part information
+}
+
+void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+    RCLCPP_INFO_STREAM(this->get_logger(), "Camera5");
     // Include the logic to retrieve part information
 }
 

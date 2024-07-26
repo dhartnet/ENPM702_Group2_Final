@@ -1,0 +1,73 @@
+[35m[1mScanning dependencies of target reach_target[0m
+[  0%] Built target ament_cmake_python_copy_final_project
+[ 50%] Built target AriacLogicalCameraPlugin
+[ 75%] [32mBuilding CXX object CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o[0m
+running install_scripts
+running egg_info
+writing final_project.egg-info/PKG-INFO
+writing dependency_links to final_project.egg-info/dependency_links.txt
+writing top-level names to final_project.egg-info/top_level.txt
+running egg_info
+writing final_project.egg-info/PKG-INFO
+writing dependency_links to final_project.egg-info/dependency_links.txt
+writing top-level names to final_project.egg-info/top_level.txt
+reading manifest file 'final_project.egg-info/SOURCES.txt'
+writing manifest file 'final_project.egg-info/SOURCES.txt'
+reading manifest file 'final_project.egg-info/SOURCES.txt'
+writing manifest file 'final_project.egg-info/SOURCES.txt'
+[ 75%] Built target ament_cmake_python_build_final_project_egg
+[ 75%] Built target ament_cmake_python_build_final_project_scripts
+In file included from [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:5[m[K:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:[m[K In constructor ‘[01m[KRobotTargetClient::RobotTargetClient(const string&)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:50:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera2_callback[m[K’ is not a member of ‘[01m[KRobotTargetClient[m[K’
+   50 |             std::bind(&RobotTargetClient::[01;31m[Kcamera2_callback[m[K, this, std::placeholders::_1), sub_option);
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:54:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera3_callback[m[K’ is not a member of ‘[01m[KRobotTargetClient[m[K’
+   54 |             std::bind(&RobotTargetClient::[01;31m[Kcamera3_callback[m[K, this, std::placeholders::_1), sub_option);
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:58:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera4_callback[m[K’ is not a member of ‘[01m[KRobotTargetClient[m[K’
+   58 |             std::bind(&RobotTargetClient::[01;31m[Kcamera4_callback[m[K, this, std::placeholders::_1), sub_option);
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:62:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera5_callback[m[K’ is not a member of ‘[01m[KRobotTargetClient[m[K’
+   62 |             std::bind(&RobotTargetClient::[01;31m[Kcamera5_callback[m[K, this, std::placeholders::_1), sub_option);
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera1_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   54 | void RobotTargetClient::camera1_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K At global scope:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:59:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid RobotTargetClient::camera2_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+   59 | void [01;31m[KRobotTargetClient[m[K::camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+      |      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:59:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid RobotTargetClient::camera2_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+In file included from [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:5[m[K:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:12:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass RobotTargetClient[m[K’ defined here
+   12 | class [01;36m[KRobotTargetClient[m[K : public rclcpp::Node {
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:64:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid RobotTargetClient::camera3_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+   64 | void [01;31m[KRobotTargetClient[m[K::camera3_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+      |      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:64:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid RobotTargetClient::camera3_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+In file included from [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:5[m[K:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:12:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass RobotTargetClient[m[K’ defined here
+   12 | class [01;36m[KRobotTargetClient[m[K : public rclcpp::Node {
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:69:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid RobotTargetClient::camera4_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+   69 | void [01;31m[KRobotTargetClient[m[K::camera4_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+      |      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:69:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid RobotTargetClient::camera4_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+In file included from [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:5[m[K:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:12:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass RobotTargetClient[m[K’ defined here
+   12 | class [01;36m[KRobotTargetClient[m[K : public rclcpp::Node {
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:74:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid RobotTargetClient::camera5_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+   74 | void [01;31m[KRobotTargetClient[m[K::camera5_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+      |      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:74:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid RobotTargetClient::camera5_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’
+In file included from [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:5[m[K:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/include/final_project/reach_target_action.hpp:12:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass RobotTargetClient[m[K’ defined here
+   12 | class [01;36m[KRobotTargetClient[m[K : public rclcpp::Node {
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/reach_target.dir/build.make:63: CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:112: CMakeFiles/reach_target.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

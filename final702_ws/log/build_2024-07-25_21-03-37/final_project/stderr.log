@@ -1,0 +1,28 @@
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera1_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:57:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_pos_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   57 |     auto [01;35m[Kx_pos_[m[K = pose.position.x;
+      |          [01;35m[K^~~~~~[m[K
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   54 | ack([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera2_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:65:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   65 | ack([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera3_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:70:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   70 | ack([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera4_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:75:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   75 | ack([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera5_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:80:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   80 | ack([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+

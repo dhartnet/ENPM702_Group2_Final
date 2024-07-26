@@ -1,0 +1,54 @@
+[0.168s] Invoking command in '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project': CMAKE_PREFIX_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic LD_LIBRARY_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project -- -j20 -l20
+[0.212s] [35m[1mScanning dependencies of target reach_target[0m
+[0.235s] [  0%] Built target ament_cmake_python_copy_final_project
+[0.242s] [ 50%] Built target AriacLogicalCameraPlugin
+[0.243s] [ 75%] [32mBuilding CXX object CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o[0m
+[0.458s] running install_scripts
+[0.460s] running egg_info
+[0.460s] writing final_project.egg-info/PKG-INFO
+[0.460s] writing dependency_links to final_project.egg-info/dependency_links.txt
+[0.461s] writing top-level names to final_project.egg-info/top_level.txt
+[0.487s] running egg_info
+[0.488s] writing final_project.egg-info/PKG-INFO
+[0.488s] writing dependency_links to final_project.egg-info/dependency_links.txt
+[0.488s] writing top-level names to final_project.egg-info/top_level.txt
+[0.498s] reading manifest file 'final_project.egg-info/SOURCES.txt'
+[0.499s] writing manifest file 'final_project.egg-info/SOURCES.txt'
+[0.525s] reading manifest file 'final_project.egg-info/SOURCES.txt'
+[0.526s] writing manifest file 'final_project.egg-info/SOURCES.txt'
+[0.541s] [ 75%] Built target ament_cmake_python_build_final_project_egg
+[0.601s] [ 75%] Built target ament_cmake_python_build_final_project_scripts
+[2.557s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera1_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.557s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:65:41:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+[2.557s]    65 | void RobotTargetClient::camera2_callback[01;31m[K([m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+[2.557s]       |                                         [01;31m[K^[m[K
+[2.557s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:70:41:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+[2.558s]    70 | void RobotTargetClient::camera3_callback[01;31m[K([m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+[2.558s]       |                                         [01;31m[K^[m[K
+[2.558s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:75:41:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+[2.558s]    75 | void RobotTargetClient::camera4_callback[01;31m[K([m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+[2.558s]       |                                         [01;31m[K^[m[K
+[2.558s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:80:41:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+[2.558s]    80 | void RobotTargetClient::camera5_callback[01;31m[K([m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+[2.558s]       |                                         [01;31m[K^[m[K
+[2.558s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:85:33:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[2.558s]    85 | int main(int argc, char** argv) [01;31m[K{[m[K
+[2.558s]       |                                 [01;31m[K^[m[K
+[2.558s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:57:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_pos_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.558s]    57 |     auto [01;35m[Kx_pos_[m[K = pose.position.x;
+[2.558s]       |          [01;35m[K^~~~~~[m[K
+[2.558s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:94:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.558s]    94 | [01;31m[K}[m[K
+[2.558s]       | [01;31m[K^[m[K
+[2.558s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:107:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.558s]    54 | onst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) [01;36m[K{[m[K
+[2.559s]       |                                                                 [01;36m[K^[m[K
+[2.559s] 
+[2.559s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.559s]    54 | ack([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+[2.559s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.559s] 
+[6.475s] make[2]: *** [CMakeFiles/reach_target.dir/build.make:63: CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o] Error 1
+[6.475s] make[1]: *** [CMakeFiles/Makefile2:112: CMakeFiles/reach_target.dir/all] Error 2
+[6.475s] make: *** [Makefile:141: all] Error 2
+[6.478s] Invoked command in '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project' returned '2': CMAKE_PREFIX_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic LD_LIBRARY_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project -- -j20 -l20

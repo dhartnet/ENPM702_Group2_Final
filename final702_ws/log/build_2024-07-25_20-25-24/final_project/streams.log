@@ -1,0 +1,201 @@
+[0.208s] Invoking command in '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project': CMAKE_PREFIX_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic LD_LIBRARY_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project -- -j20 -l20
+[0.269s] [35m[1mScanning dependencies of target reach_target[0m
+[0.292s] [  0%] Built target ament_cmake_python_copy_final_project
+[0.308s] [ 50%] Built target AriacLogicalCameraPlugin
+[0.314s] [ 75%] [32mBuilding CXX object CMakeFiles/reach_target.dir/src/reach_target_client.cpp.o[0m
+[0.548s] running install_scripts
+[0.568s] running egg_info
+[0.569s] writing final_project.egg-info/PKG-INFO
+[0.569s] writing dependency_links to final_project.egg-info/dependency_links.txt
+[0.569s] writing top-level names to final_project.egg-info/top_level.txt
+[0.581s] running egg_info
+[0.583s] writing final_project.egg-info/PKG-INFO
+[0.584s] writing dependency_links to final_project.egg-info/dependency_links.txt
+[0.584s] writing top-level names to final_project.egg-info/top_level.txt
+[0.610s] reading manifest file 'final_project.egg-info/SOURCES.txt'
+[0.610s] writing manifest file 'final_project.egg-info/SOURCES.txt'
+[0.623s] reading manifest file 'final_project.egg-info/SOURCES.txt'
+[0.623s] writing manifest file 'final_project.egg-info/SOURCES.txt'
+[0.644s] [ 75%] Built target ament_cmake_python_build_final_project_egg
+[0.671s] [ 75%] Built target ament_cmake_python_build_final_project_scripts
+[2.677s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera1_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.677s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:54:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.677s]    54 | void RobotTargetClient::camera1_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+[2.677s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera2_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:59:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.678s]    59 | void RobotTargetClient::camera2_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+[2.678s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera3_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:64:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.678s]    64 | void RobotTargetClient::camera3_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+[2.678s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera4_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:69:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.678s]    69 | void RobotTargetClient::camera4_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+[2.678s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.678s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:[m[K In member function ‘[01m[Kvoid RobotTargetClient::camera5_callback(mage_msgs::msg::AdvancedLogicalCameraImage_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.679s] [01m[K/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/final_project/src/reach_target_client.cpp:74:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.679s]    74 | void RobotTargetClient::camera5_callback([01;35m[Kconst mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg[m[K) {
+[2.679s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[12.626s] [100%] [32m[1mLinking CXX executable reach_target[0m
+[15.503s] [100%] Built target reach_target
+[15.520s] Invoked command in '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project' returned '0': CMAKE_PREFIX_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic LD_LIBRARY_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project -- -j20 -l20
+[15.563s] Invoking command in '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project': CMAKE_PREFIX_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic LD_LIBRARY_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --install /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project
+[15.572s] -- Install configuration: ""
+[15.572s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/reach_target
+[15.576s] -- Set runtime path of "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/reach_target" to ""
+[15.577s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/library_path.sh
+[15.577s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/library_path.dsv
+[15.577s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include
+[15.577s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project
+[15.577s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project/ariac_logical_camera_plugin.hpp
+[15.577s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project/disable_shadows_plugin.hpp
+[15.578s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/include/final_project/reach_target_action.hpp
+[15.578s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/libAriacLogicalCameraPlugin.so
+[15.578s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config
+[15.578s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config/waypoint_params.yaml
+[15.578s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config/sensors.yaml
+[15.578s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//config/frame.rviz
+[15.578s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch
+[15.578s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch/robot_state_publisher.launch.py
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch/spawn_turtlebot3.launch.py
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//launch/final_project.launch.py
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/box_pallet.dae
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/AM200_029_05_Diffuse.jpg
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/AM200_029_06_Diffuse.jpg
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/meshes/AM200_029_01_Diffuse.jpg
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/model.sdf
+[15.579s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_2/model.config
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_03_Diffuse.jpg
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/box_pallet.dae
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_04_Diffuse.jpg
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_01_Diffuse.jpg
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/meshes/AM200_029_08_Diffuse.jpg
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/model.sdf
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets_3/model.config
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets
+[15.580s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/box_pallet.dae
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/AM200_029_07_Diffuse.jpg
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/AM200_029_02_Diffuse.jpg
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/meshes/AM200_029_01_Diffuse.jpg
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/model.sdf
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/box_pallets/model.config
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/model.sdf
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/marker_2.png
+[15.581s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/5x5_1000-2.png
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/svgtopng.zip
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/textures/5x5_1000-2.svg
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/scripts
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/materials/scripts/marker.material
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_2/model.config
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/model.sdf
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/marker_0_old.png
+[15.582s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/svgtopng.zip
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/5x5_1000-0.svg
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/textures/5x5_1000-0.png
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/scripts
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/materials/scripts/marker.material
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_0/model.config
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/meshes
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/meshes/camera.dae
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/model.sdf
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/materials
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/materials/textures
+[15.583s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/materials/textures/camera.png
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/advanced_logical_camera/model.config
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/example-2.png
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/floor.dae
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/Suede_Blue.jpg
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/meshes/Suede_Blue_1.jpg
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/model.sdf
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/floor/model.config
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes
+[15.584s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_base.stl
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_cap.stl
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_collision.stl
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/meshes/battery_pins.stl
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/model.sdf
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/battery/model.config
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/bin_exterior.dae
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/bin_interior.stl
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/Steel_Brushed_Stainless.jpg.001.jpg
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/Metal_Rough.jpg.001.jpg
+[15.585s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/meshes/bin_exterior.stl
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/model.sdf
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/parts_bin/model.config
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/model.sdf
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/svgtopng.zip
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/5x5_1000-1.png
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/marker_1.png
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/textures/5x5_1000-1.svg
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/scripts
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/materials/scripts/marker.material
+[15.586s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/aruco_marker_1/model.config
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle/model-1_4.sdf
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle/model.sdf
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//models/turtlebot3_waffle/model.config
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds/final_summer_702.world
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds/enpm605.world
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project//worlds/final.world
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/pythonpath.sh
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/pythonpath.dsv
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info
+[15.587s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/SOURCES.txt
+[15.587s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/top_level.txt
+[15.587s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/dependency_links.txt
+[15.587s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages//final_project.egg-info/PKG-INFO
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/tf_broadcaster.py
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/spawn_params.py
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/environment_startup.py
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/utilities.py
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/tf2_geometry_msgs.py
+[15.587s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project/__init__.py
+[15.609s] Listing '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages/final_project'...
+[15.614s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/environment_startup_node.py
+[15.614s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/sensor_tf_broadcaster.py
+[15.614s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/part_spawner.py
+[15.614s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/object_tf_broadcaster.py
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/final_project/robot_target_interface.py
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/ament_index/resource_index/package_run_dependencies/final_project
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/ament_index/resource_index/parent_prefix_path/final_project
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/ament_prefix_path.sh
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/ament_prefix_path.dsv
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/path.sh
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/environment/path.dsv
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.bash
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.sh
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.zsh
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/local_setup.dsv
+[15.615s] -- Installing: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/package.dsv
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/ament_index/resource_index/packages/final_project
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/cmake/ament_cmake_export_libraries-extras.cmake
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/cmake/final_projectConfig.cmake
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/cmake/final_projectConfig-version.cmake
+[15.615s] -- Up-to-date: /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/share/final_project/package.xml
+[15.619s] Invoked command in '/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project' returned '0': CMAKE_PREFIX_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project:/opt/ros/galactic LD_LIBRARY_PATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/mage_msgs/lib/python3.8/site-packages:/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/install/final_project/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --install /home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/final_project

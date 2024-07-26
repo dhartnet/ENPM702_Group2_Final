@@ -1,0 +1,13 @@
+{
+  "package_name": "mage_msgs",
+  "non_idl_tuples": [
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/AdvancedLogicalCameraImage.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/Part.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/PartPose.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/Sensors.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/Marker.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/MarkerArray.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:msg/NewCoordinates.msg",
+    "/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/src/mage_msgs:action/RobotTarget.action"
+  ]
+}
