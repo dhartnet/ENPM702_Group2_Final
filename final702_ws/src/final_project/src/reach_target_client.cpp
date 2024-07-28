@@ -75,6 +75,8 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
 
     // add transforms and make output that "feedback_callback" can read?
 
+    // transform from camera#_frame to world
+
     //******** Willie's Code Below *************/
     //******** Not Sure We Need This, Just Transforms ***********/
     
