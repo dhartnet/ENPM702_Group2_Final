@@ -67,11 +67,15 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
-
+    std::string part_string_color;
+    if (part_color == msg->part_poses[0].part.color.RED){
+        part_string_color = "red";
+        elif .....
+    }
     // Extract x/y positions of object w/respect to camera
     double camera_x = part_pose.position.x;
     double camera_y = part_pose.position.y;
-
+    
     RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
     // add transforms and make output that "feedback_callback" can read?
