@@ -66,6 +66,7 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
 
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
+    auto part_color = msg->part_poses[0].part.color;
 
     // Extract x/y positions of object w/respect to camera
     double camera_x = part_pose.position.x;
@@ -124,6 +125,7 @@ void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCa
 
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
+    auto part_color = msg->part_poses[0].part.color;
     
     // Extract x/y positions of object w/respect to camera
     double camera_x = part_pose.position.x;
@@ -145,6 +147,7 @@ void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCa
 
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
+    auto part_color = msg->part_poses[0].part.color;
     
     // Extract x/y positions of object w/respect to camera
     double camera_x = part_pose.position.x;
@@ -165,6 +168,7 @@ void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCa
 
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
+    auto part_color = msg->part_poses[0].part.color;
     
     // Extract x/y positions of object w/respect to camera
     double camera_x = part_pose.position.x;
@@ -185,6 +189,7 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
 
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
+    auto part_color = msg->part_poses[0].part.color;
     
     // Extract x/y positions of object w/respect to camera
     double camera_x = part_pose.position.x;
