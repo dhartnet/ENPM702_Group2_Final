@@ -370,6 +370,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     // Second frame
     /////////////////////////////////////////////////
+    auto camera2_map_value = target_map_.at("camera2_frame");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera2_frame";
@@ -389,6 +390,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
         /////////////////////////////////////////////////
     // third frame
     /////////////////////////////////////////////////
+    auto camera3_map_value = target_map_.at("camera3_frame");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera3_frame";
@@ -405,9 +407,10 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 
-        /////////////////////////////////////////////////
+    /////////////////////////////////////////////////
     // fourth frame
     /////////////////////////////////////////////////
+    auto camera4_map_value = target_map_.at("camera4_frame");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera4_frame";
@@ -427,6 +430,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     // Fifth frame
     /////////////////////////////////////////////////
+    auto camera5_map_value = target_map_.at("camera5_frame");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera5_frame";
