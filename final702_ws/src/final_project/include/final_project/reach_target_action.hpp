@@ -4,6 +4,8 @@
 #include "nav_msgs/msg/odometry.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
+#include <iostream>
+#include <map>
 
 // // for static broadcaster
 // #include "tf2_ros/static_transform_broadcaster.h"
@@ -24,7 +26,7 @@ class RobotTargetClient : public rclcpp::Node {
    public:
     float x_pos_;
     explicit RobotTargetClient(const std::string& node_name)
-        : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1} {
+        : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1}, camera1_flag_{false}, camera2_flag_{false}, camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false} {
 
         // Create a mutually exclusive callback group
         group1_ = this->create_callback_group(
@@ -120,6 +122,7 @@ class RobotTargetClient : public rclcpp::Node {
     void camera4_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
     void camera5_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
 
+
    private:
     rclcpp::CallbackGroup::SharedPtr action_group_;
     rclcpp::TimerBase::SharedPtr timer_;
@@ -136,6 +139,13 @@ class RobotTargetClient : public rclcpp::Node {
     rclcpp::Subscription<mage_msgs::msg::AdvancedLogicalCameraImage>::SharedPtr camera3_sub_;
     rclcpp::Subscription<mage_msgs::msg::AdvancedLogicalCameraImage>::SharedPtr camera4_sub_;
     rclcpp::Subscription<mage_msgs::msg::AdvancedLogicalCameraImage>::SharedPtr camera5_sub_;
+    bool camera1_flag_;
+    bool camera2_flag_;
+    bool camera3_flag_;
+    bool camera4_flag_;
+    bool camera5_flag_;
+    std::multiap<> target_map_;
+    // MAP attribute // initialize in constructor
 
    // private: // Added for Broadcaster
 

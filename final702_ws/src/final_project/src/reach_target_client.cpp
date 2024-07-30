@@ -57,13 +57,27 @@ void RobotTargetClient::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
 }
 
 void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "Camera1 callback triggered");
+    if (!camera1_flag_){
+        RCLCPP_INFO(this->get_logger(), "Camera1 callback triggered");
 
-    if (msg->part_poses.empty()) {
-        RCLCPP_WARN(this->get_logger(), "No parts detected");
-        return;
+        if (msg->part_poses.empty()) {
+            RCLCPP_WARN(this->get_logger(), "No parts detected");
+            return;
+        }
+
+        // Get camera message data
+        auto part_pose = msg->part_poses[0].pose;
+        auto part_color = msg->part_poses[0].part.color;
+
+        // Extract x/y positions of object w/respect to camera
+        double camera_x = part_pose.position.x;
+        double camera_y = part_pose.position.y;
+
+        RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        camera1_flag_ = true;
     }
 
+<<<<<<< Updated upstream
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
@@ -77,6 +91,8 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
     double camera_y = part_pose.position.y;
     
     RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+=======
+>>>>>>> Stashed changes
 
     // add transforms and make output that "feedback_callback" can read?
 
