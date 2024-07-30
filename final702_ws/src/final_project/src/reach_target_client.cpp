@@ -364,7 +364,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.transform.rotation.y = camera1_map_value.quat_y;
     static_transform_stamped.transform.rotation.z = camera1_map_value.quat_z;
     static_transform_stamped.transform.rotation.w = camera1_map_value.quat_w;
-    Send the transform
+    // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 
     /////////////////////////////////////////////////
@@ -376,7 +376,14 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
 
     static_transform_stamped.transform.translation.x = camera2_sub_->part_poses[0].pose.position.x;
     static_transform_stamped.transform.translation.y = camera2_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.z = camera2_map_value.pose_z;
 
+    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
+    static_transform_stamped.transform.rotation.x = camera2_map_value.quat_x;
+    static_transform_stamped.transform.rotation.y = camera2_map_value.quat_y;
+    static_transform_stamped.transform.rotation.z = camera2_map_value.quat_z;
+    static_transform_stamped.transform.rotation.w = camera2_map_value.quat_w;
+    // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 
         /////////////////////////////////////////////////
@@ -388,7 +395,14 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
 
     static_transform_stamped.transform.translation.x = camera3_sub_->part_poses[0].pose.position.x;
     static_transform_stamped.transform.translation.y = camera3_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.z = camera3_map_value.pose_z;
 
+    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
+    static_transform_stamped.transform.rotation.x = camera3_map_value.quat_x;
+    static_transform_stamped.transform.rotation.y = camera3_map_value.quat_y;
+    static_transform_stamped.transform.rotation.z = camera3_map_value.quat_z;
+    static_transform_stamped.transform.rotation.w = camera3_map_value.quat_w;
+    // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 
         /////////////////////////////////////////////////
@@ -400,9 +414,17 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
 
     static_transform_stamped.transform.translation.x = camera4_sub_->part_poses[0].pose.position.x;
     static_transform_stamped.transform.translation.y = camera4_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.z = camera4_map_value.pose_z;
+
+    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
+    static_transform_stamped.transform.rotation.x = camera4_map_value.quat_x;
+    static_transform_stamped.transform.rotation.y = camera4_map_value.quat_y;
+    static_transform_stamped.transform.rotation.z = camera4_map_value.quat_z;
+    static_transform_stamped.transform.rotation.w = camera4_map_value.quat_w;
+    // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 
-        /////////////////////////////////////////////////
+    /////////////////////////////////////////////////
     // Fifth frame
     /////////////////////////////////////////////////
     static_transform_stamped.header.stamp = this->get_clock()->now();
@@ -411,6 +433,14 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
 
     static_transform_stamped.transform.translation.x = camera5_sub_->part_poses[0].pose.position.x;
     static_transform_stamped.transform.translation.y = camera5_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.z = camera5_map_value.pose_z;
+
+    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
+    static_transform_stamped.transform.rotation.x = camera5_map_value.quat_x;
+    static_transform_stamped.transform.rotation.y = camera5_map_value.quat_y;
+    static_transform_stamped.transform.rotation.z = camera5_map_value.quat_z;
+    static_transform_stamped.transform.rotation.w = camera5_map_value.quat_w;
+    // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 } //End Broadcaster
 
