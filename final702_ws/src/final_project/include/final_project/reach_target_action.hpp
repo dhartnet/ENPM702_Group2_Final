@@ -26,7 +26,8 @@ class RobotTargetClient : public rclcpp::Node {
    public:
     float x_pos_;
     explicit RobotTargetClient(const std::string& node_name)
-        : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1}, camera1_flag_{false}, camera2_flag_{false}, camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false} {
+        : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1}, camera1_flag_{false}, camera2_flag_{false}, 
+        camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false}, target_map_{}{
 
         // Create a mutually exclusive callback group
         group1_ = this->create_callback_group(
@@ -144,7 +145,7 @@ class RobotTargetClient : public rclcpp::Node {
     bool camera3_flag_;
     bool camera4_flag_;
     bool camera5_flag_;
-    std::multiap<> target_map_;
+    std::map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
     // MAP attribute // initialize in constructor
 
    // private: // Added for Broadcaster

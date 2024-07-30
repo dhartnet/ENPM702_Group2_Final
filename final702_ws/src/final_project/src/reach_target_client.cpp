@@ -77,7 +77,6 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
         camera1_flag_ = true;
     }
 
-<<<<<<< Updated upstream
     // Get camera message data
     auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
@@ -91,8 +90,6 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
     double camera_y = part_pose.position.y;
     
     RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
-=======
->>>>>>> Stashed changes
 
     // add transforms and make output that "feedback_callback" can read?
 
