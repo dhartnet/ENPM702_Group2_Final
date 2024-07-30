@@ -9,7 +9,16 @@
 #include "geometry_msgs/msg/pose.hpp"
 
 #include "broadcaster_demo.hpp"
+#include "geometry_msgs/msg/transform_stamped.hpp"
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <utils.hpp>
+// needed for the listener
+#include <tf2/exceptions.h>
 #include "listener_demo.hpp"
+#include <rclcpp/rclcpp.hpp>
+#include <listener_demo.hpp>
+#include <geometry_msgs/msg/pose.hpp> // look into this 
+
 
 void RobotTargetClient::send_goal() {
     auto goal_msg = RobotTarget::Goal();
@@ -330,7 +339,125 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
     }
 }
 
-// BROADCASTER and LISTENER
+// BROADCASTER
+using namespace std::chrono_literals;
+
+void BroadcasterDemo::static_broadcast_timer_cb_()
+{
+    geometry_msgs::msg::TransformStamped static_transform_stamped;
+    /////////////////////////////////////////////////
+    // First frame
+    /////////////////////////////////////////////////
+    static_transform_stamped.header.stamp = this->get_clock()->now();
+    static_transform_stamped.header.frame_id = "camera1_frame";
+    static_transform_stamped.child_frame_id = "camera1_part";
+    // need to add subscriber to get this info
+    static_transform_stamped.transform.translation.x = camera1_sub_->part_poses[0].pose.position.x;
+    static_transform_stamped.transform.translation.y = camera1_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.z = 5.0;
+
+    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
+    static_transform_stamped.transform.rotation.x = quaternion.x;
+    static_transform_stamped.transform.rotation.y = quaternion.y;
+    static_transform_stamped.transform.rotation.z = quaternion.z;
+    static_transform_stamped.transform.rotation.w = quaternion.w;
+    Send the transform
+    tf_static_broadcaster_->sendTransform(static_transform_stamped);
+
+    /////////////////////////////////////////////////
+    // Second frame
+    /////////////////////////////////////////////////
+    static_transform_stamped.header.stamp = this->get_clock()->now();
+    static_transform_stamped.header.frame_id = "world";
+    static_transform_stamped.child_frame_id = "camera2_frame";
+
+    static_transform_stamped.transform.translation.x = camera2_sub_->part_poses[0].pose.position.x;
+    static_transform_stamped.transform.translation.y = camera2_sub_->part_poses[0].pose.position.y;
+
+    tf_static_broadcaster_->sendTransform(static_transform_stamped);
+
+        /////////////////////////////////////////////////
+    // third frame
+    /////////////////////////////////////////////////
+    static_transform_stamped.header.stamp = this->get_clock()->now();
+    static_transform_stamped.header.frame_id = "world";
+    static_transform_stamped.child_frame_id = "camera3_frame";
+
+    static_transform_stamped.transform.translation.x = camera3_sub_->part_poses[0].pose.position.x;
+    static_transform_stamped.transform.translation.y = camera3_sub_->part_poses[0].pose.position.y;
+
+    tf_static_broadcaster_->sendTransform(static_transform_stamped);
+
+        /////////////////////////////////////////////////
+    // fourth frame
+    /////////////////////////////////////////////////
+    static_transform_stamped.header.stamp = this->get_clock()->now();
+    static_transform_stamped.header.frame_id = "world";
+    static_transform_stamped.child_frame_id = "camera4_frame";
+
+    static_transform_stamped.transform.translation.x = camera4_sub_->part_poses[0].pose.position.x;
+    static_transform_stamped.transform.translation.y = camera4_sub_->part_poses[0].pose.position.y;
+    tf_static_broadcaster_->sendTransform(static_transform_stamped);
+
+        /////////////////////////////////////////////////
+    // Fifth frame
+    /////////////////////////////////////////////////
+    static_transform_stamped.header.stamp = this->get_clock()->now();
+    static_transform_stamped.header.frame_id = "world";
+    static_transform_stamped.child_frame_id = "camera5_frame";
+
+    static_transform_stamped.transform.translation.x = camera5_sub_->part_poses[0].pose.position.x;
+    static_transform_stamped.transform.translation.y = camera5_sub_->part_poses[0].pose.position.y;
+    tf_static_broadcaster_->sendTransform(static_transform_stamped);
+} //End Broadcaster
+
+// LISTENER
+using namespace std::chrono_literals;
+
+void ListenerDemo::listen_transform(const std::string &source_frame, const std::string &target_frame)
+{
+    geometry_msgs::msg::TransformStamped t_stamped;
+    geometry_msgs::msg::Pose pose_out_1;
+    geometry_msgs::msg::Pose pose_out_2;
+    geometry_msgs::msg::Pose pose_out_3;
+    geometry_msgs::msg::Pose pose_out_4;
+    geometry_msgs::msg::Pose pose_out_5;
+
+    try
+    {
+        t_stamped = tf_buffer_->lookupTransform(source_frame, target_frame, tf2::TimePointZero, 50ms);
+    }
+    catch (const tf2::TransformException &ex)
+    {
+        RCLCPP_ERROR_STREAM(this->get_logger(), "Could not get transform between " << source_frame << " and " << target_frame << ": " << ex.what());
+        return;
+    }
+
+    pose_out.position.x = t_stamped.transform.translation.x;
+    pose_out.position.y = t_stamped.transform.translation.y;
+    // pose_out.position.z = t_stamped.transform.translation.z;
+    // pose_out.orientation = t_stamped.transform.rotation;
+
+    RCLCPP_INFO_STREAM(this->get_logger(), target_frame << " in " << source_frame << ":\n"
+                                                        << "x: " << pose_out.position.x << "\t"
+                                                        << "y: " << pose_out.position.y << "\t"
+                                                        // << "z: " << pose_out.position.z << "\n"
+                                                        // << "qx: " << pose_out.orientation.x << "\t"
+                                                        // << "qy: " << pose_out.orientation.y << "\t"
+                                                        // << "qz: " << pose_out.orientation.z << "\t"
+                                                        // << "qw: " << pose_out.orientation.w << "\n");
+}
+
+void ListenerDemo::listen_timer_cb_()
+{
+    listen_transform("camera1_part", "world");
+    listen_transform("camera2_part", "world");
+    listen_transform("camera3_part", "world");
+    listen_transform("camera4_part", "world");
+    listen_transform("camera5_part", "world");
+    // 5 X need to send info to reach target by creating topics this can publish to, the reach taget subscriber will subscribe to this. 
+
+} //End Listener
 
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
