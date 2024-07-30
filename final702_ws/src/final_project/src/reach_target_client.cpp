@@ -8,6 +8,9 @@
 #include <tf2/LinearMath/Matrix3x3.h>
 #include "geometry_msgs/msg/pose.hpp"
 
+#include "broadcaster_demo.hpp"
+#include "listener_demo.hpp"
+
 void RobotTargetClient::send_goal() {
     auto goal_msg = RobotTarget::Goal();
 
