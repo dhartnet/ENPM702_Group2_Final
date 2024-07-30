@@ -60,9 +60,12 @@ void RobotTargetClient::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
 }
 
 void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
+    
+    // Flag to ensure data is only gathered and inserted into map once
     if (!camera1_flag_){
         RCLCPP_INFO(this->get_logger(), "Camera1 callback triggered");
 
+        // empty data check
         if (msg->part_poses.empty()) {
             RCLCPP_WARN(this->get_logger(), "No parts detected");
             return;
@@ -80,6 +83,7 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
         part.quat_z = part_pose.orientation.z;
         part.quat_w = part_pose.orientation.w;
 
+        // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
         std::string part_string_color;
 
@@ -98,125 +102,232 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
             part_string_color = "purple"; }
 
-        target_map_.insert({"camera1_frame", (part_string_color, part)});  // {camera#_frame, (color, pose/orientation data)} = {key, (data pair)}
+        // Insert data into map
+        // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
+        target_map_.insert({"camera1_frame", (part_string_color, part)});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 1 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
+        // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
         camera1_flag_ = true;
 
         }
     }
 
 void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "Camera2 callback triggered");
+    // Flag to ensure data is only gathered and inserted into map once
+    if (!camera2_flag_){
+        RCLCPP_INFO(this->get_logger(), "Camera2 callback triggered");
 
-    if (msg->part_poses.empty()) {
-        RCLCPP_WARN(this->get_logger(), "No parts detected");
-        return;
+        // empty data check
+        if (msg->part_poses.empty()) {
+            RCLCPP_WARN(this->get_logger(), "No parts detected");
+            return;
+        }
+
+        // Extract pose and orientation positions of object w/respect to camera
+        mage_msgs::msg::RobotTarget part;
+        auto part_pose = msg->part_poses[0].pose;
+        part.pose_x = part_pose.position.x;
+        part.pose_y = part_pose.position.y;
+        part.pose_z = part_pose.position.z;
+
+        part.quat_x = part_pose.orientation.x;
+        part.quat_y = part_pose.orientation.y;
+        part.quat_z = part_pose.orientation.z;
+        part.quat_w = part_pose.orientation.w;
+
+        // Extract color information for object from camera and check what color it is
+        auto part_color = msg->part_poses[0].part.color;
+        std::string part_string_color;
+
+        if (part_color == msg->part_poses[0].part.color.RED){
+            part_string_color = "red"; }
+
+        else if (part_color == msg->part_poses[0].part.color.GREEN){
+            part_string_color = "green"; }
+        
+        else if (part_color == msg->part_poses[0].part.color.BLUE){
+            part_string_color = "blue"; }
+
+        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+            part_string_color = "orange"; }
+
+        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+            part_string_color = "purple"; }
+
+        // Insert data into map
+        // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
+        target_map_.insert({"camera2_frame", (part_string_color, part)});
+
+        RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+
+        // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
+        camera2_flag_ = true;
+
     }
-
-    // Get camera message data
-    auto part_color = msg->part_poses[0].part.color;
-    
-    // Extract pose and orientation positions of object w/respect to camera
-    mage_msgs::msg::RobotTarget part;
-    auto part_pose = msg->part_poses[0].pose;
-    part.pose_x = part_pose.position.x;
-    part.pose_y = part_pose.position.y;
-    part.pose_z = part_pose.position.z;
-
-    part.quat_x = part_pose.orientation.x;
-    part.quat_y = part_pose.orientation.y;
-    part.quat_z = part_pose.orientation.z;
-    part.quat_w = part_pose.orientation.w;
-
-    RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
-
-    // add transforms and make output that "feedback_callback" can read?
-
 }
 
 void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "Camera3 callback triggered");
+    // Flag to ensure data is only gathered and inserted into map once
+    if (!camera3_flag_){
+        RCLCPP_INFO(this->get_logger(), "Camera3 callback triggered");
 
-    if (msg->part_poses.empty()) {
-        RCLCPP_WARN(this->get_logger(), "No parts detected");
-        return;
+        // empty data check
+        if (msg->part_poses.empty()) {
+            RCLCPP_WARN(this->get_logger(), "No parts detected");
+            return;
+        }
+
+        // Extract pose and orientation positions of object w/respect to camera
+        mage_msgs::msg::RobotTarget part;
+        auto part_pose = msg->part_poses[0].pose;
+        part.pose_x = part_pose.position.x;
+        part.pose_y = part_pose.position.y;
+        part.pose_z = part_pose.position.z;
+
+        part.quat_x = part_pose.orientation.x;
+        part.quat_y = part_pose.orientation.y;
+        part.quat_z = part_pose.orientation.z;
+        part.quat_w = part_pose.orientation.w;
+
+        // Extract color information for object from camera and check what color it is
+        auto part_color = msg->part_poses[0].part.color;
+        std::string part_string_color;
+
+        if (part_color == msg->part_poses[0].part.color.RED){
+            part_string_color = "red"; }
+
+        else if (part_color == msg->part_poses[0].part.color.GREEN){
+            part_string_color = "green"; }
+        
+        else if (part_color == msg->part_poses[0].part.color.BLUE){
+            part_string_color = "blue"; }
+
+        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+            part_string_color = "orange"; }
+
+        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+            part_string_color = "purple"; }
+
+        // Insert data into map
+        // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
+        target_map_.insert({"camera3_frame", (part_string_color, part)});
+
+        RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+
+        // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
+        camera3_flag_ = true;
+
     }
-
-    // Get camera message data
-    auto part_color = msg->part_poses[0].part.color;
-    
-    // Extract pose and orientation positions of object w/respect to camera
-    mage_msgs::msg::RobotTarget part;
-    auto part_pose = msg->part_poses[0].pose;
-    part.pose_x = part_pose.position.x;
-    part.pose_y = part_pose.position.y;
-    part.pose_z = part_pose.position.z;
-
-    part.quat_x = part_pose.orientation.x;
-    part.quat_y = part_pose.orientation.y;
-    part.quat_z = part_pose.orientation.z;
-    part.quat_w = part_pose.orientation.w;
-
-    RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
-
-    // add transforms and make output that "feedback_callback" can read?
 }
 
 void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "Camera4 callback triggered");
+    // Flag to ensure data is only gathered and inserted into map once
+    if (!camera4_flag_){
+        RCLCPP_INFO(this->get_logger(), "Camera4 callback triggered");
 
-    if (msg->part_poses.empty()) {
-        RCLCPP_WARN(this->get_logger(), "No parts detected");
-        return;
+        // empty data check
+        if (msg->part_poses.empty()) {
+            RCLCPP_WARN(this->get_logger(), "No parts detected");
+            return;
+        }
+
+        // Extract pose and orientation positions of object w/respect to camera
+        mage_msgs::msg::RobotTarget part;
+        auto part_pose = msg->part_poses[0].pose;
+        part.pose_x = part_pose.position.x;
+        part.pose_y = part_pose.position.y;
+        part.pose_z = part_pose.position.z;
+
+        part.quat_x = part_pose.orientation.x;
+        part.quat_y = part_pose.orientation.y;
+        part.quat_z = part_pose.orientation.z;
+        part.quat_w = part_pose.orientation.w;
+
+        // Extract color information for object from camera and check what color it is
+        auto part_color = msg->part_poses[0].part.color;
+        std::string part_string_color;
+
+        if (part_color == msg->part_poses[0].part.color.RED){
+            part_string_color = "red"; }
+
+        else if (part_color == msg->part_poses[0].part.color.GREEN){
+            part_string_color = "green"; }
+        
+        else if (part_color == msg->part_poses[0].part.color.BLUE){
+            part_string_color = "blue"; }
+
+        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+            part_string_color = "orange"; }
+
+        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+            part_string_color = "purple"; }
+
+        // Insert data into map
+        // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
+        target_map_.insert({"camera4_frame", (part_string_color, part)});
+
+        RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+
+        // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
+        camera4_flag_ = true;
+
     }
-
-    // Get camera message data
-    auto part_color = msg->part_poses[0].part.color;
-    
-    // Extract pose and orientation positions of object w/respect to camera
-    mage_msgs::msg::RobotTarget part;
-    auto part_pose = msg->part_poses[0].pose;
-    part.pose_x = part_pose.position.x;
-    part.pose_y = part_pose.position.y;
-    part.pose_z = part_pose.position.z;
-
-    part.quat_x = part_pose.orientation.x;
-    part.quat_y = part_pose.orientation.y;
-    part.quat_z = part_pose.orientation.z;
-    part.quat_w = part_pose.orientation.w;
-    RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
-
-    // add transforms and make output that "feedback_callback" can read?
 }
 
 void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "Camera5 callback triggered");
+    // Flag to ensure data is only gathered and inserted into map once
+    if (!camera5_flag_){
+        RCLCPP_INFO(this->get_logger(), "Camera5 callback triggered");
 
-    if (msg->part_poses.empty()) {
-        RCLCPP_WARN(this->get_logger(), "No parts detected");
-        return;
+        // empty data check
+        if (msg->part_poses.empty()) {
+            RCLCPP_WARN(this->get_logger(), "No parts detected");
+            return;
+        }
+
+        // Extract pose and orientation positions of object w/respect to camera
+        mage_msgs::msg::RobotTarget part;
+        auto part_pose = msg->part_poses[0].pose;
+        part.pose_x = part_pose.position.x;
+        part.pose_y = part_pose.position.y;
+        part.pose_z = part_pose.position.z;
+
+        part.quat_x = part_pose.orientation.x;
+        part.quat_y = part_pose.orientation.y;
+        part.quat_z = part_pose.orientation.z;
+        part.quat_w = part_pose.orientation.w;
+
+        // Extract color information for object from camera and check what color it is
+        auto part_color = msg->part_poses[0].part.color;
+        std::string part_string_color;
+
+        if (part_color == msg->part_poses[0].part.color.RED){
+            part_string_color = "red"; }
+
+        else if (part_color == msg->part_poses[0].part.color.GREEN){
+            part_string_color = "green"; }
+        
+        else if (part_color == msg->part_poses[0].part.color.BLUE){
+            part_string_color = "blue"; }
+
+        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+            part_string_color = "orange"; }
+
+        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+            part_string_color = "purple"; }
+
+        // Insert data into map
+        // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
+        target_map_.insert({"camera5_frame", (part_string_color, part)});
+
+        RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+
+        // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
+        camera5_flag_ = true;
+
     }
-
-    // Get camera message data
-    auto part_color = msg->part_poses[0].part.color;
-    
-    // Extract pose and orientation positions of object w/respect to camera
-    mage_msgs::msg::RobotTarget part;
-    auto part_pose = msg->part_poses[0].pose;
-    part.pose_x = part_pose.position.x;
-    part.pose_y = part_pose.position.y;
-    part.pose_z = part_pose.position.z;
-
-    part.quat_x = part_pose.orientation.x;
-    part.quat_y = part_pose.orientation.y;
-    part.quat_z = part_pose.orientation.z;
-    part.quat_w = part_pose.orientation.w;
-
-    RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
-
-    // add transforms and make output that "feedback_callback" can read?
 }
 
 // BROADCASTER and LISTENER
