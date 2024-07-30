@@ -145,7 +145,7 @@ class RobotTargetClient : public rclcpp::Node {
     bool camera3_flag_;
     bool camera4_flag_;
     bool camera5_flag_;
-    std::map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
+    std::unordered_map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
     // MAP attribute // initialize in constructor
 
    // private: // Added for Broadcaster

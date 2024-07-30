@@ -344,23 +344,26 @@ using namespace std::chrono_literals;
 
 void BroadcasterDemo::static_broadcast_timer_cb_()
 {
-    geometry_msgs::msg::TransformStamped static_transform_stamped;
+    geometry_msgs::msg::TransformStamped static_transform_stamped; // need to make unique variable names?
     /////////////////////////////////////////////////
-    // First frame
+    // First camera frame
     /////////////////////////////////////////////////
+    // get value from map using key
+    auto camera1_map_value = target_map_.at("camera1_frame");
+
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "camera1_frame";
     static_transform_stamped.child_frame_id = "camera1_part";
     // need to add subscriber to get this info
-    static_transform_stamped.transform.translation.x = camera1_sub_->part_poses[0].pose.position.x;
-    static_transform_stamped.transform.translation.y = camera1_sub_->part_poses[0].pose.position.y;
-    static_transform_stamped.transform.translation.z = 5.0;
+    static_transform_stamped.transform.translation.x = camera1_map_value.pose_x; //get values from map using RobotTarget msg type
+    static_transform_stamped.transform.translation.y = camera1_map_value.pose_y;
+    static_transform_stamped.transform.translation.z = camera1_map_value.pose_z;
 
     // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
-    static_transform_stamped.transform.rotation.x = quaternion.x;
-    static_transform_stamped.transform.rotation.y = quaternion.y;
-    static_transform_stamped.transform.rotation.z = quaternion.z;
-    static_transform_stamped.transform.rotation.w = quaternion.w;
+    static_transform_stamped.transform.rotation.x = camera1_map_value.quat_x;
+    static_transform_stamped.transform.rotation.y = camera1_map_value.quat_y;
+    static_transform_stamped.transform.rotation.z = camera1_map_value.quat_z;
+    static_transform_stamped.transform.rotation.w = camera1_map_value.quat_w;
     Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 

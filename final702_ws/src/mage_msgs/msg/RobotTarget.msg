@@ -9,6 +9,7 @@
 # uint8 color # RED, GREEN, BLUE, ORANGE, or PURPLE
 
 # part coordinates/orientation
+string color
 float64 pose_x
 float64 pose_y
 float64 pose_z
