@@ -20,6 +20,7 @@ set(msg_files
   "msg/Marker.msg"
   "msg/MarkerArray.msg"
   "msg/NewCoordinates.msg"
+  "msg/RobotTarget.msg"
 )
 
 set (action_files
