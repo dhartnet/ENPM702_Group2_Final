@@ -68,72 +68,44 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
             return;
         }
 
-        // Get camera message data
+        // Extract pose and orientation positions of object w/respect to camera
+        mage_msgs::msg::RobotTarget part;
         auto part_pose = msg->part_poses[0].pose;
+        part.pose_x = part_pose.position.x;
+        part.pose_y = part_pose.position.y;
+        part.pose_z = part_pose.position.z;
+
+        part.quat_x = part_pose.orientation.x;
+        part.quat_y = part_pose.orientation.y;
+        part.quat_z = part_pose.orientation.z;
+        part.quat_w = part_pose.orientation.w;
+
         auto part_color = msg->part_poses[0].part.color;
+        std::string part_string_color;
 
-        // Extract x/y positions of object w/respect to camera
-        double camera_x = part_pose.position.x;
-        double camera_y = part_pose.position.y;
+        if (part_color == msg->part_poses[0].part.color.RED){
+            part_string_color = "red"; }
 
-        RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        else if (part_color == msg->part_poses[0].part.color.GREEN){
+            part_string_color = "green"; }
+        
+        else if (part_color == msg->part_poses[0].part.color.BLUE){
+            part_string_color = "blue"; }
+
+        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+            part_string_color = "orange"; }
+
+        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+            part_string_color = "purple"; }
+
+        target_map_.insert({"camera1_frame", (part_string_color, part)});  // {camera#_frame, (color, pose/orientation data)} = {key, (data pair)}
+
+        RCLCPP_INFO(this->get_logger(), "Object in camera 1 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+
         camera1_flag_ = true;
+
+        }
     }
-
-    // Get camera message data
-    auto part_pose = msg->part_poses[0].pose;
-    auto part_color = msg->part_poses[0].part.color;
-    std::string part_string_color;
-    if (part_color == msg->part_poses[0].part.color.RED){
-        part_string_color = "red";
-        elif .....
-    }
-    // Extract x/y positions of object w/respect to camera
-    double camera_x = part_pose.position.x;
-    double camera_y = part_pose.position.y;
-    
-    RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
-
-    // add transforms and make output that "feedback_callback" can read?
-
-    // transform from camera#_frame to world
-
-    //******** Willie's Code Below *************/
-    //******** Not Sure We Need This, Just Transforms ***********/
-    
-    // // position and orientation
-    // double camera_x = part_pose.position.x;
-    // double camera_y = part_pose.position.y;
-    // double camera_z = part_pose.position.z;
-
-    // tf2::Quaternion quat(
-    //     part_pose.orientation.x,
-    //     part_pose.orientation.y,
-    //     part_pose.orientation.z,
-    //     part_pose.orientation.w
-    // );
-    // tf2::Matrix3x3 mat(quat);
-    // double roll, pitch, yaw;
-    // mat.getRPY(roll, pitch, yaw);
-
-    // RCLCPP_INFO(this->get_logger(), "Camera position: [x: %f, y: %f, z: %f]", camera_x, camera_y, camera_z);
-    // RCLCPP_INFO(this->get_logger(), "Camera orientation: [roll: %f, pitch: %f, yaw: %f]", roll, pitch, yaw);
-
-    // // camera center on the plane
-    // double projection_distance = camera_z / std::cos(pitch); 
-
-    // double camera_center_x = camera_x + projection_distance * std::cos(yaw);
-    // double camera_center_y = camera_y + projection_distance * std::sin(yaw);
-
-    // RCLCPP_INFO(this->get_logger(), "Camera center on plane: [x: %f, y: %f]", camera_center_x, camera_center_y);
-
-    // // store or use the camera center
-    // next_target_x_ = camera_center_x;
-    // next_target_y_ = camera_center_y;
-
-    // position and orientation
-
-}
 
 void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg) {
     RCLCPP_INFO(this->get_logger(), "Camera2 callback triggered");
@@ -144,12 +116,19 @@ void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCa
     }
 
     // Get camera message data
-    auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
     
-    // Extract x/y positions of object w/respect to camera
-    double camera_x = part_pose.position.x;
-    double camera_y = part_pose.position.y;
+    // Extract pose and orientation positions of object w/respect to camera
+    mage_msgs::msg::RobotTarget part;
+    auto part_pose = msg->part_poses[0].pose;
+    part.pose_x = part_pose.position.x;
+    part.pose_y = part_pose.position.y;
+    part.pose_z = part_pose.position.z;
+
+    part.quat_x = part_pose.orientation.x;
+    part.quat_y = part_pose.orientation.y;
+    part.quat_z = part_pose.orientation.z;
+    part.quat_w = part_pose.orientation.w;
 
     RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -166,12 +145,19 @@ void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCa
     }
 
     // Get camera message data
-    auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
     
-    // Extract x/y positions of object w/respect to camera
-    double camera_x = part_pose.position.x;
-    double camera_y = part_pose.position.y;
+    // Extract pose and orientation positions of object w/respect to camera
+    mage_msgs::msg::RobotTarget part;
+    auto part_pose = msg->part_poses[0].pose;
+    part.pose_x = part_pose.position.x;
+    part.pose_y = part_pose.position.y;
+    part.pose_z = part_pose.position.z;
+
+    part.quat_x = part_pose.orientation.x;
+    part.quat_y = part_pose.orientation.y;
+    part.quat_z = part_pose.orientation.z;
+    part.quat_w = part_pose.orientation.w;
 
     RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -187,13 +173,19 @@ void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCa
     }
 
     // Get camera message data
-    auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
     
-    // Extract x/y positions of object w/respect to camera
-    double camera_x = part_pose.position.x;
-    double camera_y = part_pose.position.y;
+    // Extract pose and orientation positions of object w/respect to camera
+    mage_msgs::msg::RobotTarget part;
+    auto part_pose = msg->part_poses[0].pose;
+    part.pose_x = part_pose.position.x;
+    part.pose_y = part_pose.position.y;
+    part.pose_z = part_pose.position.z;
 
+    part.quat_x = part_pose.orientation.x;
+    part.quat_y = part_pose.orientation.y;
+    part.quat_z = part_pose.orientation.z;
+    part.quat_w = part_pose.orientation.w;
     RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
     // add transforms and make output that "feedback_callback" can read?
@@ -208,17 +200,26 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
     }
 
     // Get camera message data
-    auto part_pose = msg->part_poses[0].pose;
     auto part_color = msg->part_poses[0].part.color;
     
-    // Extract x/y positions of object w/respect to camera
-    double camera_x = part_pose.position.x;
-    double camera_y = part_pose.position.y;
+    // Extract pose and orientation positions of object w/respect to camera
+    mage_msgs::msg::RobotTarget part;
+    auto part_pose = msg->part_poses[0].pose;
+    part.pose_x = part_pose.position.x;
+    part.pose_y = part_pose.position.y;
+    part.pose_z = part_pose.position.z;
+
+    part.quat_x = part_pose.orientation.x;
+    part.quat_y = part_pose.orientation.y;
+    part.quat_z = part_pose.orientation.z;
+    part.quat_w = part_pose.orientation.w;
 
     RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
     // add transforms and make output that "feedback_callback" can read?
 }
+
+// BROADCASTER and LISTENER
 
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
