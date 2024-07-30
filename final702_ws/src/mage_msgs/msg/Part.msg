@@ -13,4 +13,3 @@ uint8 REGULATOR=13
 
 uint8 color # RED, GREEN, BLUE, ORANGE, or PURPLE
 uint8 type # BATTERY, PUMP, SENSOR, or REGULATOR
-
