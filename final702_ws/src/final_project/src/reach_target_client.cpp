@@ -78,7 +78,6 @@ void RobotTargetClient::feedback_callback(GoalHandle::SharedPtr, const std::shar
         else if (camera = "camera5") {
             next_target_x_ = camera_5_x_;
             next_target_y_ = camera_5_y_; }
-        
     }
 }
 
