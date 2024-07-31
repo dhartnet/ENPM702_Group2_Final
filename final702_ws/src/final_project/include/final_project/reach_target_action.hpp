@@ -1,3 +1,5 @@
+#pragma once
+
 #include "geometry_msgs/msg/twist.hpp"
 #include "mage_msgs/action/robot_target.hpp"
 #include "mage_msgs/msg/advanced_logical_camera_image.hpp"
@@ -29,12 +31,23 @@ class RobotTargetClient : public rclcpp::Node {
         : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1}, camera1_flag_{false}, camera2_flag_{false}, 
             camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false}, target_map_{}, camera_1_x_{}, camera_1_y_{}, 
             camera_2_x_{}, camera_2_y_{},  camera_3_x_{}, camera_3_y_{},  camera_4_x_{}, camera_4_y_{},  camera_5_x_{}, camera_5_y_{} {
+        
+        // Load parameters from the YAML file
+        this->declare_parameter<std::string>("waypoint1", "green");
+        this->declare_parameter<std::string>("waypoint2", "red");
+        this->declare_parameter<std::string>("waypoint3", "orange");
+        this->declare_parameter<std::string>("waypoint4", "purple");
+        this->declare_parameter<std::string>("waypoint5", "blue");
+
+        waypoint_colors_["waypoint1"] = this->get_parameter("waypoint1").as_string();
+        waypoint_colors_["waypoint2"] = this->get_parameter("waypoint2").as_string();
+        waypoint_colors_["waypoint3"] = this->get_parameter("waypoint3").as_string();
+        waypoint_colors_["waypoint4"] = this->get_parameter("waypoint4").as_string();
+        waypoint_colors_["waypoint5"] = this->get_parameter("waypoint5").as_string();
+
 
         // Create a mutually exclusive callback group
-        group1_ = this->create_callback_group(
-            rclcpp::CallbackGroupType::MutuallyExclusive);
-
-        
+        group1_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
         // Create a mutually exclusive callback group
         rclcpp::SubscriptionOptions sub_option;
@@ -76,18 +89,20 @@ class RobotTargetClient : public rclcpp::Node {
         camera5_sub_ = this->create_subscription<mage_msgs::msg::AdvancedLogicalCameraImage>(
             "/mage/camera5/image", rclcpp::SensorDataQoS(),
             std::bind(&RobotTargetClient::camera5_callback, this, std::placeholders::_1), sub_option);
+            };
 
-   private:
-    void send_goal();
-    void goal_response_callback(std::shared_future<GoalHandle::SharedPtr> future);
-    void feedback_callback(GoalHandle::SharedPtr, const std::shared_ptr<const RobotTarget::Feedback> feedback);
-    void result_callback(const GoalHandle::WrappedResult& result);
-    void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
-    void camera1_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
-    void camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
-    void camera3_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
-    void camera4_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
-    void camera5_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
+        
+    private:    
+        void send_goal();
+        void goal_response_callback(std::shared_future<GoalHandle::SharedPtr> future);
+        void feedback_callback(GoalHandle::SharedPtr, const std::shared_ptr<const RobotTarget::Feedback> feedback);
+        void result_callback(const GoalHandle::WrappedResult& result);
+        void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
+        void camera1_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
+        void camera2_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
+        void camera3_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
+        void camera4_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
+        void camera5_callback(const mage_msgs::msg::AdvancedLogicalCameraImage::SharedPtr msg);
 
 
    private:
@@ -111,7 +126,10 @@ class RobotTargetClient : public rclcpp::Node {
     bool camera3_flag_;
     bool camera4_flag_;
     bool camera5_flag_;
-    std::unordered_map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
+    //add 
+    std::unordered_map<std::string, std::string> waypoint_colors_;
+    std::unordered_map<std::string, mage_msgs::action::RobotTarget> target_map_; // (string "camera#_color", pose)
+    // std::unordered_map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
 
     double camera_1_x_{};
     double camera_1_y_{};
@@ -128,5 +146,4 @@ class RobotTargetClient : public rclcpp::Node {
     double camera_5_x_{};
     double camera_5_y_{};
 
-};
 };
