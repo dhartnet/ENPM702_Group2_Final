@@ -1,8 +1,0 @@
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/AdvancedLogicalCameraImage.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/Part.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/PartPose.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/Sensors.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/Marker.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/MarkerArray.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:msg/NewCoordinates.idl
-/home/dustinhartnett/Documents/GitHub/ENPM702_Group2_Final/final702_ws/build/mage_msgs/rosidl_adapter/mage_msgs:action/RobotTarget.idl

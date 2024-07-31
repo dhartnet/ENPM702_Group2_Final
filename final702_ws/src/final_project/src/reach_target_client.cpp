@@ -2,21 +2,19 @@
 #include <rclcpp/rclcpp.hpp>
 
 #include "mage_msgs/msg/advanced_logical_camera_image.hpp"
+#include "mage_msgs/msg/part.hpp"
 #include "reach_target_action.hpp"
 
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Matrix3x3.h>
 #include "geometry_msgs/msg/pose.hpp"
 
-#include "broadcaster_demo.hpp"
 #include "geometry_msgs/msg/transform_stamped.hpp"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <utils.hpp>
 // needed for the listener
 #include <tf2/exceptions.h>
-#include "listener_demo.hpp"
 #include <rclcpp/rclcpp.hpp>
-#include <listener_demo.hpp>
 #include <geometry_msgs/msg/pose.hpp> // look into this 
 
 
@@ -126,26 +124,26 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
 
-        if (part_color == msg->part_poses[0].part.color.RED){
+        if (part_color == mage_msgs::msg::Part::RED) {
             part.color = "red"; }
 
-        else if (part_color == msg->part_poses[0].part.color.GREEN){
+        else if (part_color == mage_msgs::msg::Part::GREEN){
             part.color = "green";}
         
-        else if (part_color == msg->part_poses[0].part.color.BLUE){
+        else if (part_color == mage_msgs::msg::Part::BLUE){
             part.color = "blue";}
 
-        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+        else if (part_color == mage_msgs::msg::Part::ORANGE){
             part.color = "orange";}
 
-        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+        else if (part_color == mage_msgs::msg::Part::PURPLE){
             part.color = "purple";}
 
         // Insert data into map
-        // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
+        // {key, (data pair)} = {<string> camera#_frame, <RobotTarget> pose/orientation data}
         target_map_.insert({"camera1", part});
 
-        RCLCPP_INFO(this->get_logger(), "Object in camera 1 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        // RCLCPP_INFO(this->get_logger(), "Object in camera 1 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
         // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
         camera1_flag_ = true;
@@ -179,26 +177,26 @@ void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCa
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
 
-        if (part_color == msg->part_poses[0].part.color.RED){
+        if (part_color == mage_msgs::msg::Part::RED) {
             part.color = "red"; }
 
-        else if (part_color == msg->part_poses[0].part.color.GREEN){
+        else if (part_color == mage_msgs::msg::Part::GREEN){
             part.color = "green";}
         
-        else if (part_color == msg->part_poses[0].part.color.BLUE){
+        else if (part_color == mage_msgs::msg::Part::BLUE){
             part.color = "blue";}
 
-        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+        else if (part_color == mage_msgs::msg::Part::ORANGE){
             part.color = "orange";}
 
-        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+        else if (part_color == mage_msgs::msg::Part::PURPLE){
             part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
         target_map_.insert({"camera2", part});
 
-        RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        // RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
         // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
         camera2_flag_ = true;
@@ -232,26 +230,26 @@ void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCa
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
 
-        if (part_color == msg->part_poses[0].part.color.RED){
+        if (part_color == mage_msgs::msg::Part::RED) {
             part.color = "red"; }
 
-        else if (part_color == msg->part_poses[0].part.color.GREEN){
+        else if (part_color == mage_msgs::msg::Part::GREEN){
             part.color = "green";}
         
-        else if (part_color == msg->part_poses[0].part.color.BLUE){
+        else if (part_color == mage_msgs::msg::Part::BLUE){
             part.color = "blue";}
 
-        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+        else if (part_color == mage_msgs::msg::Part::ORANGE){
             part.color = "orange";}
 
-        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+        else if (part_color == mage_msgs::msg::Part::PURPLE){
             part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
         target_map_.insert({"camera3", part});
 
-        RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        // RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
         // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
         camera3_flag_ = true;
@@ -285,26 +283,26 @@ void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCa
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
 
-        if (part_color == msg->part_poses[0].part.color.RED){
+        if (part_color == mage_msgs::msg::Part::RED) {
             part.color = "red"; }
 
-        else if (part_color == msg->part_poses[0].part.color.GREEN){
+        else if (part_color == mage_msgs::msg::Part::GREEN){
             part.color = "green";}
         
-        else if (part_color == msg->part_poses[0].part.color.BLUE){
+        else if (part_color == mage_msgs::msg::Part::BLUE){
             part.color = "blue";}
 
-        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+        else if (part_color == mage_msgs::msg::Part::ORANGE){
             part.color = "orange";}
 
-        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+        else if (part_color == mage_msgs::msg::Part::PURPLE){
             part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
         target_map_.insert({"camera4", part});
 
-        RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        // RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
         // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
         camera4_flag_ = true;
@@ -338,26 +336,26 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
 
-        if (part_color == msg->part_poses[0].part.color.RED){
+        if (part_color == mage_msgs::msg::Part::RED) {
             part.color = "red"; }
 
-        else if (part_color == msg->part_poses[0].part.color.GREEN){
+        else if (part_color == mage_msgs::msg::Part::GREEN){
             part.color = "green";}
         
-        else if (part_color == msg->part_poses[0].part.color.BLUE){
+        else if (part_color == mage_msgs::msg::Part::BLUE){
             part.color = "blue";}
 
-        else if (part_color == msg->part_poses[0].part.color.ORANGE){
+        else if (part_color == mage_msgs::msg::Part::ORANGE){
             part.color = "orange";}
 
-        else if (part_color == msg->part_poses[0].part.color.PURPLE){
+        else if (part_color == mage_msgs::msg::Part::PURPLE){
             part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
         target_map_.insert({"camera5", part});
 
-        RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
+        // RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
         // Set flag to TRUE when data has been inserted into map so duplicate data isn't continously added
         camera5_flag_ = true;
@@ -368,7 +366,7 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
 // BROADCASTER
 using namespace std::chrono_literals;
 
-void BroadcasterDemo::static_broadcast_timer_cb_()
+void RobotTargetClient::static_broadcast_timer_cb_()
 
 // Need Flag?
 {
@@ -474,7 +472,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
 // LISTENER
 using namespace std::chrono_literals;
 
-void ListenerDemo::listen_transform(const std::string &source_frame, const std::string &target_frame)
+void RobotTargetClient::listen_transform(const std::string &source_frame, const std::string &target_frame)
 {
     geometry_msgs::msg::TransformStamped t_stamped;
     geometry_msgs::msg::Pose pose_out;
@@ -527,7 +525,7 @@ void ListenerDemo::listen_transform(const std::string &source_frame, const std::
                                                         // << "qw: " << pose_out.orientation.w << "\n");
 }
 
-void ListenerDemo::listen_timer_cb_()
+void RobotTargetClient::listen_timer_cb_()
 {
     listen_transform("camera1_part", "world");
     listen_transform("camera2_part", "world");

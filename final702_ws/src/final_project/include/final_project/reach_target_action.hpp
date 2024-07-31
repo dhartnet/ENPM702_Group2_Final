@@ -1,5 +1,6 @@
 #pragma once
 
+#include "mage_msgs/msg/robot_target.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "mage_msgs/action/robot_target.hpp"
 #include "mage_msgs/msg/advanced_logical_camera_image.hpp"
@@ -8,17 +9,16 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include <iostream>
 #include <map>
+#include <utils.hpp>
 
 // // for static broadcaster
-// #include "tf2_ros/static_transform_broadcaster.h"
-// // for dynamic broadcaster
-// #include "tf2_ros/transform_broadcaster.h"
-// #include <tf2_ros/transform_listener.h>
-// #include <tf2_ros/buffer.h>
+#include "tf2_ros/static_transform_broadcaster.h"
+// for dynamic broadcaster
+#include "tf2_ros/transform_broadcaster.h"
 
-// // needed for the listener
-// #include <tf2_ros/transform_listener.h>
-// #include <tf2_ros/buffer.h>
+// needed for the listener
+#include <tf2_ros/transform_listener.h>
+#include <tf2_ros/buffer.h>
 
 using namespace std::chrono_literals;
 using RobotTarget = mage_msgs::action::RobotTarget;
@@ -31,6 +31,42 @@ class RobotTargetClient : public rclcpp::Node {
         : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1}, camera1_flag_{false}, camera2_flag_{false}, 
             camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false}, target_map_{}, camera_1_x_{}, camera_1_y_{}, 
             camera_2_x_{}, camera_2_y_{},  camera_3_x_{}, camera_3_y_{},  camera_4_x_{}, camera_4_y_{},  camera_5_x_{}, camera_5_y_{} {
+
+        RCLCPP_INFO(this->get_logger(), "Listener demo started");
+
+        // load a buffer of transforms
+        tf_buffer_ =
+            std::make_unique<tf2_ros::Buffer>(this->get_clock());
+        transform_listener_ =
+            std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
+
+        // timer to listen to the transforms
+        listen_timer_ = this->create_wall_timer(1s, std::bind(&RobotTargetClient::listen_timer_cb_, this));
+
+        // parameter to decide whether to execute the broadcaster or not
+        RCLCPP_INFO(this->get_logger(), "Broadcaster demo started");
+
+        // initialize a static transform broadcaster
+        tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
+
+        // initialize the transform broadcaster
+        tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
+
+        // Load a buffer of transforms
+        tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
+        tf_buffer_->setUsingDedicatedThread(true);
+        // Create a utils object to use the utility functions
+        utils_ptr_ = std::make_shared<Utils>();
+
+        // timer to publish the transform
+        broadcast_timer_ = this->create_wall_timer(
+            100ms,
+            std::bind(&RobotTargetClient::broadcast_timer_cb_, this));
+
+        // timer to publish the transform
+        static_broadcast_timer_ = this->create_wall_timer(
+            10s,
+            std::bind(&RobotTargetClient::static_broadcast_timer_cb_, this));
         
         // Load parameters from the YAML file
         this->declare_parameter<std::string>("waypoint1", "green");
@@ -128,8 +164,7 @@ class RobotTargetClient : public rclcpp::Node {
     bool camera5_flag_;
     //add 
     std::unordered_map<std::string, std::string> waypoint_colors_;
-    std::unordered_map<std::string, mage_msgs::action::RobotTarget> target_map_; // (string "camera#_color", pose)
-    // std::unordered_map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
+    std::unordered_map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
 
     double camera_1_x_{};
     double camera_1_y_{};
@@ -145,5 +180,53 @@ class RobotTargetClient : public rclcpp::Node {
 
     double camera_5_x_{};
     double camera_5_y_{};
+
+    /*!< Boolean variable to store the value of the parameter "listen" */
+    bool param_listen_;
+    /*!< Buffer that stores several seconds of transforms for easy lookup by the listener. */
+    std::unique_ptr<tf2_ros::Buffer> tf_buffer_;
+    /*!< Transform listener object */
+    std::shared_ptr<tf2_ros::TransformListener> transform_listener_{nullptr};
+    /*!< Wall timer object */
+    rclcpp::TimerBase::SharedPtr listen_timer_;
+
+    /**
+     * @brief Listen to a transform
+     *
+     * @param source_frame Source frame (child frame) of the transform
+     * @param target_frame Target frame (parent frame) of the transform
+     */
+    void listen_transform(const std::string &source_frame, const std::string &target_frame);
+
+    /**
+     * @brief Timer to listen to the transform
+     *
+     */
+    void listen_timer_cb_();
+
+    /*!< Boolean parameter to whether or not start the broadcaster */
+    bool param_broadcast_;
+    /*!< Static broadcaster object */
+    std::shared_ptr<tf2_ros::StaticTransformBroadcaster> tf_static_broadcaster_;
+    /*!< Broadcaster object */
+    std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+    /*!< Utils object to access utility functions*/
+    std::shared_ptr<Utils> utils_ptr_;
+    /*!< Wall timer object for the broadcaster*/
+    rclcpp::TimerBase::SharedPtr broadcast_timer_;
+    /*!< Wall timer object for the static broadcaster*/
+    rclcpp::TimerBase::SharedPtr static_broadcast_timer_;
+
+
+    /**
+     * @brief Timer to broadcast the transform
+     *
+     */
+    void broadcast_timer_cb_();
+    /**
+     * @brief Timer to broadcast the transform
+     *
+     */
+    void static_broadcast_timer_cb_();
 
 };
