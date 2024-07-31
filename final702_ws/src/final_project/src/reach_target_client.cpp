@@ -97,23 +97,33 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
         std::string part_string_color;
 
         if (part_color == msg->part_poses[0].part.color.RED){
-            part_string_color = "red"; }
+            part.color = "red"; 
+            // part_string_color = "red"; 
+            }
 
         else if (part_color == msg->part_poses[0].part.color.GREEN){
-            part_string_color = "green"; }
+            part.color = "green";
+            // part_string_color = "green"; 
+            }
         
         else if (part_color == msg->part_poses[0].part.color.BLUE){
-            part_string_color = "blue"; }
+            part.color = "blue";
+            // part_string_color = "blue"; 
+            }
 
         else if (part_color == msg->part_poses[0].part.color.ORANGE){
-            part_string_color = "orange"; }
+            part.color = "orange";
+            // part_string_color = "orange"; 
+            }
 
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
-            part_string_color = "purple"; }
+            part.color = "purple";
+            // part_string_color = "purple"; 
+            }
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera1_frame", (part_string_color, part)});
+        target_map_.insert({"camera1", part});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 1 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -167,7 +177,7 @@ void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera2_frame", (part_string_color, part)});
+        target_map_.insert({"camera2", (part_string_color, part)});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -221,7 +231,7 @@ void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera3_frame", (part_string_color, part)});
+        target_map_.insert({"camera3", (part_string_color, part)});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -275,7 +285,7 @@ void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera4_frame", (part_string_color, part)});
+        target_map_.insert({"camera4", (part_string_color, part)});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -329,7 +339,7 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera5_frame", (part_string_color, part)});
+        target_map_.insert({"camera5", (part_string_color, part)});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -349,7 +359,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     // First camera frame
     /////////////////////////////////////////////////
     // get value from map using key
-    auto camera1_map_value = target_map_.at("camera1_frame");
+    auto camera1_map_value = target_map_.at("camera1");
 
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "camera1_frame";
