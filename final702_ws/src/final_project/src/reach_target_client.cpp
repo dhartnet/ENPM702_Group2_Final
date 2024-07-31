@@ -375,8 +375,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera2_frame";
 
-    static_transform_stamped.transform.translation.x = camera2_sub_->part_poses[0].pose.position.x;
-    static_transform_stamped.transform.translation.y = camera2_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.x = camera2_map_value.pose_x;
+    static_transform_stamped.transform.translation.y = camera2_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera2_map_value.pose_z;
 
     // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
@@ -395,8 +395,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera3_frame";
 
-    static_transform_stamped.transform.translation.x = camera3_sub_->part_poses[0].pose.position.x;
-    static_transform_stamped.transform.translation.y = camera3_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.x = camera3_map_value.pose_x;
+    static_transform_stamped.transform.translation.y = camera3_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera3_map_value.pose_z;
 
     // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
@@ -415,8 +415,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera4_frame";
 
-    static_transform_stamped.transform.translation.x = camera4_sub_->part_poses[0].pose.position.x;
-    static_transform_stamped.transform.translation.y = camera4_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.x = camera4_map_value.pose_x;
+    static_transform_stamped.transform.translation.y = camera4_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera4_map_value.pose_z;
 
     // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
@@ -435,8 +435,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera5_frame";
 
-    static_transform_stamped.transform.translation.x = camera5_sub_->part_poses[0].pose.position.x;
-    static_transform_stamped.transform.translation.y = camera5_sub_->part_poses[0].pose.position.y;
+    static_transform_stamped.transform.translation.x = camera5_map_value.pose_x;
+    static_transform_stamped.transform.translation.y = camera5_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera5_map_value.pose_z;
 
     // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
