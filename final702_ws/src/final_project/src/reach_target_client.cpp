@@ -464,6 +464,18 @@ void ListenerDemo::listen_transform(const std::string &source_frame, const std::
     pose_out_1.position.y = t_stamped.transform.translation.y;
     // pose_out.position.z = t_stamped.transform.translation.z;
     // pose_out.orientation = t_stamped.transform.rotation;
+    
+    pose_out_2.position.x = t_stamped.transform.translation.x;
+    pose_out_2.position.y = t_stamped.transform.translation.y;
+
+    pose_out_3.position.x = t_stamped.transform.translation.x;
+    pose_out_3.position.y = t_stamped.transform.translation.y;
+
+    pose_out_4.position.x = t_stamped.transform.translation.x;
+    pose_out_4.position.y = t_stamped.transform.translation.y;
+
+    pose_out_5.position.x = t_stamped.transform.translation.x;
+    pose_out_5.position.y = t_stamped.transform.translation.y;
 
     RCLCPP_INFO_STREAM(this->get_logger(), target_frame << " in " << source_frame << ":\n"
                                                         << "x: " << pose_out.position.x << "\t"
