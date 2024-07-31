@@ -380,7 +380,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     // Send the transform
     tf_static_broadcaster_->sendTransform(static_transform_stamped);
 
-        /////////////////////////////////////////////////
+    /////////////////////////////////////////////////
     // third frame
     /////////////////////////////////////////////////
     auto camera3_map_value = target_map_.at("camera3");
