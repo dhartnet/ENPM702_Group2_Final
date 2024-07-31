@@ -94,32 +94,21 @@ void RobotTargetClient::camera1_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
-        std::string part_string_color;
 
         if (part_color == msg->part_poses[0].part.color.RED){
-            part.color = "red"; 
-            // part_string_color = "red"; 
-            }
+            part.color = "red"; }
 
         else if (part_color == msg->part_poses[0].part.color.GREEN){
-            part.color = "green";
-            // part_string_color = "green"; 
-            }
+            part.color = "green";}
         
         else if (part_color == msg->part_poses[0].part.color.BLUE){
-            part.color = "blue";
-            // part_string_color = "blue"; 
-            }
+            part.color = "blue";}
 
         else if (part_color == msg->part_poses[0].part.color.ORANGE){
-            part.color = "orange";
-            // part_string_color = "orange"; 
-            }
+            part.color = "orange";}
 
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
-            part.color = "purple";
-            // part_string_color = "purple"; 
-            }
+            part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
@@ -158,26 +147,25 @@ void RobotTargetClient::camera2_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
-        std::string part_string_color;
 
         if (part_color == msg->part_poses[0].part.color.RED){
-            part_string_color = "red"; }
+            part.color = "red"; }
 
         else if (part_color == msg->part_poses[0].part.color.GREEN){
-            part_string_color = "green"; }
+            part.color = "green";}
         
         else if (part_color == msg->part_poses[0].part.color.BLUE){
-            part_string_color = "blue"; }
+            part.color = "blue";}
 
         else if (part_color == msg->part_poses[0].part.color.ORANGE){
-            part_string_color = "orange"; }
+            part.color = "orange";}
 
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
-            part_string_color = "purple"; }
+            part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera2", (part_string_color, part)});
+        target_map_.insert({"camera2", part});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 2 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -212,26 +200,25 @@ void RobotTargetClient::camera3_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
-        std::string part_string_color;
 
         if (part_color == msg->part_poses[0].part.color.RED){
-            part_string_color = "red"; }
+            part.color = "red"; }
 
         else if (part_color == msg->part_poses[0].part.color.GREEN){
-            part_string_color = "green"; }
+            part.color = "green";}
         
         else if (part_color == msg->part_poses[0].part.color.BLUE){
-            part_string_color = "blue"; }
+            part.color = "blue";}
 
         else if (part_color == msg->part_poses[0].part.color.ORANGE){
-            part_string_color = "orange"; }
+            part.color = "orange";}
 
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
-            part_string_color = "purple"; }
+            part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera3", (part_string_color, part)});
+        target_map_.insert({"camera3", part});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 3 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -266,26 +253,25 @@ void RobotTargetClient::camera4_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
-        std::string part_string_color;
 
         if (part_color == msg->part_poses[0].part.color.RED){
-            part_string_color = "red"; }
+            part.color = "red"; }
 
         else if (part_color == msg->part_poses[0].part.color.GREEN){
-            part_string_color = "green"; }
+            part.color = "green";}
         
         else if (part_color == msg->part_poses[0].part.color.BLUE){
-            part_string_color = "blue"; }
+            part.color = "blue";}
 
         else if (part_color == msg->part_poses[0].part.color.ORANGE){
-            part_string_color = "orange"; }
+            part.color = "orange";}
 
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
-            part_string_color = "purple"; }
+            part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera4", (part_string_color, part)});
+        target_map_.insert({"camera4", part});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 4 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -320,26 +306,25 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
 
         // Extract color information for object from camera and check what color it is
         auto part_color = msg->part_poses[0].part.color;
-        std::string part_string_color;
 
         if (part_color == msg->part_poses[0].part.color.RED){
-            part_string_color = "red"; }
+            part.color = "red"; }
 
         else if (part_color == msg->part_poses[0].part.color.GREEN){
-            part_string_color = "green"; }
+            part.color = "green";}
         
         else if (part_color == msg->part_poses[0].part.color.BLUE){
-            part_string_color = "blue"; }
+            part.color = "blue";}
 
         else if (part_color == msg->part_poses[0].part.color.ORANGE){
-            part_string_color = "orange"; }
+            part.color = "orange";}
 
         else if (part_color == msg->part_poses[0].part.color.PURPLE){
-            part_string_color = "purple"; }
+            part.color = "purple";}
 
         // Insert data into map
         // {key, (data pair)} = {<string> camera#_frame, (<string> color, <RobotTarget> pose/orientation data)}
-        target_map_.insert({"camera5", (part_string_color, part)});
+        target_map_.insert({"camera5", part});
 
         RCLCPP_INFO(this->get_logger(), "Object in camera 5 FOV is at: [x: %f, y: %f]", camera_x, camera_y);
 
@@ -369,7 +354,6 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.transform.translation.y = camera1_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera1_map_value.pose_z;
 
-    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
     static_transform_stamped.transform.rotation.x = camera1_map_value.quat_x;
     static_transform_stamped.transform.rotation.y = camera1_map_value.quat_y;
     static_transform_stamped.transform.rotation.z = camera1_map_value.quat_z;
@@ -380,7 +364,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     // Second frame
     /////////////////////////////////////////////////
-    auto camera2_map_value = target_map_.at("camera2_frame");
+    auto camera2_map_value = target_map_.at("camera2");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera2_frame";
@@ -389,7 +373,6 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.transform.translation.y = camera2_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera2_map_value.pose_z;
 
-    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
     static_transform_stamped.transform.rotation.x = camera2_map_value.quat_x;
     static_transform_stamped.transform.rotation.y = camera2_map_value.quat_y;
     static_transform_stamped.transform.rotation.z = camera2_map_value.quat_z;
@@ -400,7 +383,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
         /////////////////////////////////////////////////
     // third frame
     /////////////////////////////////////////////////
-    auto camera3_map_value = target_map_.at("camera3_frame");
+    auto camera3_map_value = target_map_.at("camera3");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera3_frame";
@@ -409,7 +392,6 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.transform.translation.y = camera3_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera3_map_value.pose_z;
 
-    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
     static_transform_stamped.transform.rotation.x = camera3_map_value.quat_x;
     static_transform_stamped.transform.rotation.y = camera3_map_value.quat_y;
     static_transform_stamped.transform.rotation.z = camera3_map_value.quat_z;
@@ -420,7 +402,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     // fourth frame
     /////////////////////////////////////////////////
-    auto camera4_map_value = target_map_.at("camera4_frame");
+    auto camera4_map_value = target_map_.at("camera4");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera4_frame";
@@ -429,7 +411,6 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.transform.translation.y = camera4_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera4_map_value.pose_z;
 
-    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
     static_transform_stamped.transform.rotation.x = camera4_map_value.quat_x;
     static_transform_stamped.transform.rotation.y = camera4_map_value.quat_y;
     static_transform_stamped.transform.rotation.z = camera4_map_value.quat_z;
@@ -440,7 +421,7 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     // Fifth frame
     /////////////////////////////////////////////////
-    auto camera5_map_value = target_map_.at("camera5_frame");
+    auto camera5_map_value = target_map_.at("camera5");
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "world";
     static_transform_stamped.child_frame_id = "camera5_frame";
@@ -449,7 +430,6 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     static_transform_stamped.transform.translation.y = camera5_map_value.pose_y;
     static_transform_stamped.transform.translation.z = camera5_map_value.pose_z;
 
-    // geometry_msgs::msg::Quaternion quaternion = utils_ptr_->set_quaternion_from_euler(M_PI / 2, M_PI / 3, M_PI / 4);
     static_transform_stamped.transform.rotation.x = camera5_map_value.quat_x;
     static_transform_stamped.transform.rotation.y = camera5_map_value.quat_y;
     static_transform_stamped.transform.rotation.z = camera5_map_value.quat_z;
@@ -487,7 +467,7 @@ void ListenerDemo::listen_transform(const std::string &source_frame, const std::
 
     RCLCPP_INFO_STREAM(this->get_logger(), target_frame << " in " << source_frame << ":\n"
                                                         << "x: " << pose_out.position.x << "\t"
-                                                        << "y: " << pose_out.position.y << "\t"
+                                                        << "y: " << pose_out.position.y << "\t");
                                                         // << "z: " << pose_out.position.z << "\n"
                                                         // << "qx: " << pose_out.orientation.x << "\t"
                                                         // << "qy: " << pose_out.orientation.y << "\t"
