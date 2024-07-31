@@ -366,8 +366,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     auto camera2_map_value = target_map_.at("camera2");
     static_transform_stamped.header.stamp = this->get_clock()->now();
-    static_transform_stamped.header.frame_id = "world";
-    static_transform_stamped.child_frame_id = "camera2_frame";
+    static_transform_stamped.header.frame_id = "camera2_frame";
+    static_transform_stamped.child_frame_id = "camera2_part";
 
     static_transform_stamped.transform.translation.x = camera2_map_value.pose_x;
     static_transform_stamped.transform.translation.y = camera2_map_value.pose_y;
@@ -385,8 +385,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     auto camera3_map_value = target_map_.at("camera3");
     static_transform_stamped.header.stamp = this->get_clock()->now();
-    static_transform_stamped.header.frame_id = "world";
-    static_transform_stamped.child_frame_id = "camera3_frame";
+    static_transform_stamped.header.frame_id = "camera3_frame";
+    static_transform_stamped.child_frame_id = "camera3_part";
 
     static_transform_stamped.transform.translation.x = camera3_map_value.pose_x;
     static_transform_stamped.transform.translation.y = camera3_map_value.pose_y;
@@ -404,8 +404,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     auto camera4_map_value = target_map_.at("camera4");
     static_transform_stamped.header.stamp = this->get_clock()->now();
-    static_transform_stamped.header.frame_id = "world";
-    static_transform_stamped.child_frame_id = "camera4_frame";
+    static_transform_stamped.header.frame_id = "camera4_frame";
+    static_transform_stamped.child_frame_id = "camera4_part";
 
     static_transform_stamped.transform.translation.x = camera4_map_value.pose_x;
     static_transform_stamped.transform.translation.y = camera4_map_value.pose_y;
@@ -423,8 +423,8 @@ void BroadcasterDemo::static_broadcast_timer_cb_()
     /////////////////////////////////////////////////
     auto camera5_map_value = target_map_.at("camera5");
     static_transform_stamped.header.stamp = this->get_clock()->now();
-    static_transform_stamped.header.frame_id = "world";
-    static_transform_stamped.child_frame_id = "camera5_frame";
+    static_transform_stamped.header.frame_id = "camera5_frame";
+    static_transform_stamped.child_frame_id = "camera5_part";
 
     static_transform_stamped.transform.translation.x = camera5_map_value.pose_x;
     static_transform_stamped.transform.translation.y = camera5_map_value.pose_y;
@@ -444,11 +444,11 @@ using namespace std::chrono_literals;
 void ListenerDemo::listen_transform(const std::string &source_frame, const std::string &target_frame)
 {
     geometry_msgs::msg::TransformStamped t_stamped;
-    geometry_msgs::msg::Pose pose_out_1;
-    geometry_msgs::msg::Pose pose_out_2;
-    geometry_msgs::msg::Pose pose_out_3;
-    geometry_msgs::msg::Pose pose_out_4;
-    geometry_msgs::msg::Pose pose_out_5;
+    geometry_msgs::msg::Pose pose_out;
+    // geometry_msgs::msg::Pose pose_out_2;
+    // geometry_msgs::msg::Pose pose_out_3;
+    // geometry_msgs::msg::Pose pose_out_4;
+    // geometry_msgs::msg::Pose pose_out_5;
 
     try
     {
@@ -460,22 +460,26 @@ void ListenerDemo::listen_transform(const std::string &source_frame, const std::
         return;
     }
 
-    pose_out_1.position.x = t_stamped.transform.translation.x;
-    pose_out_1.position.y = t_stamped.transform.translation.y;
-    // pose_out.position.z = t_stamped.transform.translation.z;
-    // pose_out.orientation = t_stamped.transform.rotation;
+    pose_out.position.x = t_stamped.transform.translation.x;
+    pose_out.position.y = t_stamped.transform.translation.y;
     
-    pose_out_2.position.x = t_stamped.transform.translation.x;
-    pose_out_2.position.y = t_stamped.transform.translation.y;
+    // pose_out_1.position.x = t_stamped.transform.translation.x;
+    // pose_out_1.position.y = t_stamped.transform.translation.y;
+    
+    // pose_out_2.position.x = t_stamped.transform.translation.x;
+    // pose_out_2.position.y = t_stamped.transform.translation.y;
 
-    pose_out_3.position.x = t_stamped.transform.translation.x;
-    pose_out_3.position.y = t_stamped.transform.translation.y;
+    // pose_out_3.position.x = t_stamped.transform.translation.x;
+    // pose_out_3.position.y = t_stamped.transform.translation.y;
 
-    pose_out_4.position.x = t_stamped.transform.translation.x;
-    pose_out_4.position.y = t_stamped.transform.translation.y;
+    // pose_out_4.position.x = t_stamped.transform.translation.x;
+    // pose_out_4.position.y = t_stamped.transform.translation.y;
 
-    pose_out_5.position.x = t_stamped.transform.translation.x;
-    pose_out_5.position.y = t_stamped.transform.translation.y;
+    // pose_out_5.position.x = t_stamped.transform.translation.x;
+    // pose_out_5.position.y = t_stamped.transform.translation.y;
+
+    // camera_1_x = t_stamped.transform.translation.x;
+    // camera_1_y = t_stamped.transform.translation.y;
 
     RCLCPP_INFO_STREAM(this->get_logger(), target_frame << " in " << source_frame << ":\n"
                                                         << "x: " << pose_out.position.x << "\t"
