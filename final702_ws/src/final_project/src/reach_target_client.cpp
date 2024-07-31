@@ -338,6 +338,8 @@ void RobotTargetClient::camera5_callback(const mage_msgs::msg::AdvancedLogicalCa
 using namespace std::chrono_literals;
 
 void BroadcasterDemo::static_broadcast_timer_cb_()
+
+// Need Flag?
 {
     geometry_msgs::msg::TransformStamped static_transform_stamped; // need to make unique variable names?
     /////////////////////////////////////////////////
