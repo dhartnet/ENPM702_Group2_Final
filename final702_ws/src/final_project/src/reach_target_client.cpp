@@ -45,11 +45,42 @@ void RobotTargetClient::goal_response_callback(std::shared_future<GoalHandle::Sh
 
 void RobotTargetClient::feedback_callback(GoalHandle::SharedPtr, const std::shared_ptr<const RobotTarget::Feedback> feedback) {
     RCLCPP_INFO(this->get_logger(), "Received feedback: distance to goal = %f", feedback->distance_to_goal);
-
+    
     if (feedback->distance_to_goal < 0.04) {
         RCLCPP_INFO(this->get_logger(), "New goal");
-        next_target_x_ = 10.0;
-        next_target_y_ = 10.0;
+
+        // get next color from yaml somehow using waypoint#
+        // ??
+
+        // reverse lookup in map to get camera#
+        // linear reverse search through map
+        for (auto j = target_map_.begin(); j != target_map_.end(); ++j) {
+            j->second = data;
+            if (data.color == "yaml_color_??") { // is this string or int?
+                camera = j->first;
+            }
+        }
+        // use camera# to get (x,y) coordinates from attributes
+        if (camera = "camera1") {
+            next_target_x_ = camera_1_x_;
+            next_target_y_ = camera_1_y_; }
+
+        else if (camera = "camera2") {
+            next_target_x_ = camera_2_x_;
+            next_target_y_ = camera_2_y_; }
+
+        else if (camera = "camera3") {
+            next_target_x_ = camera_3_x_;
+            next_target_y_ = camera_3_y_; }
+
+        else if (camera = "camera4") {
+            next_target_x_ = camera_4_x_;
+            next_target_y_ = camera_4_y_; }
+
+        else if (camera = "camera5") {
+            next_target_x_ = camera_5_x_;
+            next_target_y_ = camera_5_y_; }
+        
     }
 }
 
@@ -464,24 +495,27 @@ void ListenerDemo::listen_transform(const std::string &source_frame, const std::
 
     pose_out.position.x = t_stamped.transform.translation.x;
     pose_out.position.y = t_stamped.transform.translation.y;
+
+    // ADD NAMESPACE TO ATTRIBUTES?
+    if (source_frame == "camera1_frame") {
+        camera_1_x_ = pose_out.position.x;
+        camera_1_y_ = pose_out.position.y; }
     
-    // pose_out_1.position.x = t_stamped.transform.translation.x;
-    // pose_out_1.position.y = t_stamped.transform.translation.y;
-    
-    // pose_out_2.position.x = t_stamped.transform.translation.x;
-    // pose_out_2.position.y = t_stamped.transform.translation.y;
+    else if (source_frame == "camera2_frame") {
+        camera_2_x_ = pose_out.position.x;
+        camera_2_y_ = pose_out.position.y; }
 
-    // pose_out_3.position.x = t_stamped.transform.translation.x;
-    // pose_out_3.position.y = t_stamped.transform.translation.y;
+    else if (source_frame == "camera3_frame") {
+        camera_3_x_ = pose_out.position.x;
+        camera_3_y_ = pose_out.position.y; }
 
-    // pose_out_4.position.x = t_stamped.transform.translation.x;
-    // pose_out_4.position.y = t_stamped.transform.translation.y;
+    else if (source_frame == "camera4_frame") {
+        camera_4_x_ = pose_out.position.x;
+        camera_4_y_ = pose_out.position.y; }
 
-    // pose_out_5.position.x = t_stamped.transform.translation.x;
-    // pose_out_5.position.y = t_stamped.transform.translation.y;
-
-    // camera_1_x = t_stamped.transform.translation.x;
-    // camera_1_y = t_stamped.transform.translation.y;
+    else if (source_frame == "camera5_frame") {
+        camera_5_x_ = pose_out.position.x;
+        camera_5_y_ = pose_out.position.y; }
 
     RCLCPP_INFO_STREAM(this->get_logger(), target_frame << " in " << source_frame << ":\n"
                                                         << "x: " << pose_out.position.x << "\t"

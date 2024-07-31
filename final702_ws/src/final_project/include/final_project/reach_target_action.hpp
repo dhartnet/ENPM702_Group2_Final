@@ -27,8 +27,8 @@ class RobotTargetClient : public rclcpp::Node {
     float x_pos_;
     explicit RobotTargetClient(const std::string& node_name)
         : Node(node_name), next_target_x_{0.1}, next_target_y_{0.1}, camera1_flag_{false}, camera2_flag_{false}, 
-            camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false}, target_map_{}, camera_1_x{}, camera_1_y{}, 
-            camera_2_x{}, camera_2_y{},  camera_3_x{}, camera_3_y{},  camera_4_x{}, camera_4_y{},  camera_5_x{}, camera_5_y{} {
+            camera3_flag_{false}, camera4_flag_{false}, camera5_flag_{false}, target_map_{}, camera_1_x_{}, camera_1_y_{}, 
+            camera_2_x_{}, camera_2_y_{},  camera_3_x_{}, camera_3_y_{},  camera_4_x_{}, camera_4_y_{},  camera_5_x_{}, camera_5_y_{} {
 
         // Create a mutually exclusive callback group
         group1_ = this->create_callback_group(
@@ -76,41 +76,6 @@ class RobotTargetClient : public rclcpp::Node {
         camera5_sub_ = this->create_subscription<mage_msgs::msg::AdvancedLogicalCameraImage>(
             "/mage/camera5/image", rclcpp::SensorDataQoS(),
             std::bind(&RobotTargetClient::camera5_callback, this, std::placeholders::_1), sub_option);
-           
-        //  // Added for broadcaster
-        //  // parameter to decide whether to execute the broadcaster or not
-        // RCLCPP_INFO(this->get_logger(), "Broadcaster demo started");
-
-        // // initialize a static transform broadcaster
-        // tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
-
-        // // initialize the transform broadcaster
-        // tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
-
-        // // Load a buffer of transforms
-        // tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
-        // tf_buffer_->setUsingDedicatedThread(true);
-        // // Create a utils object to use the utility functions
-        // utils_ptr_ = std::make_shared<Utils>();
-
-        // // timer to publish the transform
-        // broadcast_timer_ = this->create_wall_timer(100ms,
-        //     std::bind(&BroadcasterDemo::broadcast_timer_cb_, this));
-
-        // // timer to publish the transform
-        // static_broadcast_timer_ = this->create_wall_timer(10s, std::bind(&BroadcasterDemo::static_broadcast_timer_cb_, this));
-           
-        // // added for listener
-        //  RCLCPP_INFO(this->get_logger(), "Listener for Transform Started");
-
-        // // load a buffer of transforms
-        // tf_buffer_ =
-        //     std::make_unique<tf2_ros::Buffer>(this->get_clock());
-        // transform_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
-
-        // // timer to listen to the transforms
-        // listen_timer_ = this->create_wall_timer(1s, std::bind(&ListenerDemo::listen_timer_cb_, this));
-    }
 
    private:
     void send_goal();
@@ -148,19 +113,20 @@ class RobotTargetClient : public rclcpp::Node {
     bool camera5_flag_;
     std::unordered_map<std::string, mage_msgs::msg::RobotTarget> target_map_; // (string "camera#_color", pose)
 
-    double camera_1_x{};
-    double camera_1_y{};
+    double camera_1_x_{};
+    double camera_1_y_{};
 
-    double camera_2_x{};
-    double camera_2_y{};
+    double camera_2_x_{};
+    double camera_2_y_{};
 
-    double camera_3_x{};
-    double camera_3_y{};
+    double camera_3_x_{};
+    double camera_3_y_{};
 
-    double camera_4_x{};
-    double camera_4_y{};
+    double camera_4_x_{};
+    double camera_4_y_{};
 
-    double camera_5_x{};
-    double camera_5_y{};
+    double camera_5_x_{};
+    double camera_5_y_{};
 
+};
 };
