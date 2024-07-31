@@ -460,8 +460,8 @@ void ListenerDemo::listen_transform(const std::string &source_frame, const std::
         return;
     }
 
-    pose_out.position.x = t_stamped.transform.translation.x;
-    pose_out.position.y = t_stamped.transform.translation.y;
+    pose_out_1.position.x = t_stamped.transform.translation.x;
+    pose_out_1.position.y = t_stamped.transform.translation.y;
     // pose_out.position.z = t_stamped.transform.translation.z;
     // pose_out.orientation = t_stamped.transform.rotation;
 
