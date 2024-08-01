@@ -14,9 +14,6 @@
 #include <utils.hpp>
 // needed for the listener
 #include <tf2/exceptions.h>
-#include <rclcpp/rclcpp.hpp>
-#include <geometry_msgs/msg/pose.hpp> // look into this 
-
 
 void RobotTargetClient::send_goal() {
     auto goal_msg = RobotTarget::Goal();
@@ -47,37 +44,46 @@ void RobotTargetClient::feedback_callback(GoalHandle::SharedPtr, const std::shar
     if (feedback->distance_to_goal < 0.04) {
         RCLCPP_INFO(this->get_logger(), "New goal");
 
-        // get next color from yaml somehow using waypoint#
+        std::string camera{};
+
+        // get next color from yaml somehow using waypoint_colors_
         // ??
 
-        // reverse lookup in map to get camera#
-        // linear reverse search through map
-        for (auto j = target_map_.begin(); j != target_map_.end(); ++j) {
-            j->second = data;
-            if (data.color == "yaml_color_??") { // is this string or int?
-                camera = j->first;
+        for (auto i = waypoint_colors_.begin(); i != waypoint_colors_.end(); ++i) {
+            auto waypoint_color = i->second;
+
+            // reverse lookup in map to get camera#
+            // linear reverse search through map
+            for (auto j = target_map_.begin(); j != target_map_.end(); ++j) {
+                auto part_data = j->second;
+                
+                if (part_data.color == waypoint_color) { // is this string or int?
+                    camera = j->first;
+
+                    // use camera# to get (x,y) coordinates from attributes
+                    if (camera == "camera1") {
+                        next_target_x_ = camera_1_x_;
+                        next_target_y_ = camera_1_y_; }
+
+                    else if (camera == "camera2") {
+                        next_target_x_ = camera_2_x_;
+                        next_target_y_ = camera_2_y_; }
+
+                    else if (camera == "camera3") {
+                        next_target_x_ = camera_3_x_;
+                        next_target_y_ = camera_3_y_; }
+
+                    else if (camera == "camera4") {
+                        next_target_x_ = camera_4_x_;
+                        next_target_y_ = camera_4_y_; }
+
+                    else if (camera == "camera5") {
+                        next_target_x_ = camera_5_x_;
+                        next_target_y_ = camera_5_y_; }
+                }
             }
+            
         }
-        // use camera# to get (x,y) coordinates from attributes
-        if (camera = "camera1") {
-            next_target_x_ = camera_1_x_;
-            next_target_y_ = camera_1_y_; }
-
-        else if (camera = "camera2") {
-            next_target_x_ = camera_2_x_;
-            next_target_y_ = camera_2_y_; }
-
-        else if (camera = "camera3") {
-            next_target_x_ = camera_3_x_;
-            next_target_y_ = camera_3_y_; }
-
-        else if (camera = "camera4") {
-            next_target_x_ = camera_4_x_;
-            next_target_y_ = camera_4_y_; }
-
-        else if (camera = "camera5") {
-            next_target_x_ = camera_5_x_;
-            next_target_y_ = camera_5_y_; }
     }
 }
 
@@ -379,6 +385,8 @@ void RobotTargetClient::static_broadcast_timer_cb_()
     static_transform_stamped.header.stamp = this->get_clock()->now();
     static_transform_stamped.header.frame_id = "camera1_frame";
     static_transform_stamped.child_frame_id = "camera1_part";
+    // static_transform_stamped.header.frame_id = "camera1_frame";
+    // static_transform_stamped.child_frame_id = "world";
     // need to add subscriber to get this info
     static_transform_stamped.transform.translation.x = camera1_map_value.pose_x; //get values from map using RobotTarget msg type
     static_transform_stamped.transform.translation.y = camera1_map_value.pose_y;

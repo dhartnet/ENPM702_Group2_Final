@@ -59,9 +59,9 @@ class RobotTargetClient : public rclcpp::Node {
         utils_ptr_ = std::make_shared<Utils>();
 
         // timer to publish the transform
-        broadcast_timer_ = this->create_wall_timer(
-            100ms,
-            std::bind(&RobotTargetClient::broadcast_timer_cb_, this));
+        // broadcast_timer_ = this->create_wall_timer(
+        //     100ms,
+        //     std::bind(&RobotTargetClient::broadcast_timer_cb_, this));
 
         // timer to publish the transform
         static_broadcast_timer_ = this->create_wall_timer(
@@ -222,7 +222,7 @@ class RobotTargetClient : public rclcpp::Node {
      * @brief Timer to broadcast the transform
      *
      */
-    void broadcast_timer_cb_();
+    // void broadcast_timer_cb_();
     /**
      * @brief Timer to broadcast the transform
      *

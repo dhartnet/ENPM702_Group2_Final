@@ -40,7 +40,7 @@ include_directories(
   )
 
 add_executable(reach_target src/reach_target_client.cpp)
-ament_target_dependencies(reach_target rclcpp mage_msgs nav_msgs geometry_msgs)
+ament_target_dependencies(reach_target rclcpp mage_msgs nav_msgs geometry_msgs tf2_ros)
 install(TARGETS reach_target DESTINATION lib/${PROJECT_NAME})
 
 # Link libraries
@@ -58,6 +58,7 @@ add_library(AriacLogicalCameraPlugin SHARED
 )
 target_include_directories(AriacLogicalCameraPlugin PUBLIC include)
 ament_target_dependencies(AriacLogicalCameraPlugin
+  # "tf2_ros"
   "gazebo_ros"
   "mage_msgs"
   "sensor_msgs"
