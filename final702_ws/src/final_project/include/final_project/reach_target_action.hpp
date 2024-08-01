@@ -81,7 +81,6 @@ class RobotTargetClient : public rclcpp::Node {
         waypoint_colors_["waypoint4"] = this->get_parameter("waypoint4").as_string();
         waypoint_colors_["waypoint5"] = this->get_parameter("waypoint5").as_string();
 
-
         // Create a mutually exclusive callback group
         group1_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
@@ -102,6 +101,8 @@ class RobotTargetClient : public rclcpp::Node {
         odom_sub_ = create_subscription<nav_msgs::msg::Odometry>(
             "/odom", 10,
             std::bind(&RobotTargetClient::odom_callback, this, std::placeholders::_1), sub_option);
+
+        
 
         // Connect to action server
         timer_ = this->create_wall_timer(1s, std::bind(&RobotTargetClient::send_goal, this), group1_);
@@ -126,6 +127,7 @@ class RobotTargetClient : public rclcpp::Node {
             "/mage/camera5/image", rclcpp::SensorDataQoS(),
             std::bind(&RobotTargetClient::camera5_callback, this, std::placeholders::_1), sub_option);
             };
+        
 
         
     private:    
