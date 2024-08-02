@@ -27,10 +27,10 @@ using GoalHandle = rclcpp_action::ClientGoalHandle<RobotTarget>;
  * @brief This class includes the methods and attributes for all camera, broadcaster, and listener callbacks. 
  * 1. Camera messages will be subscribed to through camera_#_sub.
  * 2. This data will be placed in a map, target_map.
- * 3. The Broadcaster will recieve this map infomation to broadcast to the tf listener.
- * 4. The tf listener will perform the transform to get the waypoint object from the camera to the world frame.
+ * 3. The Broadcaster calls on this map infomation with a key look up and broadcasts to the tf listener.
+ * 4. The tf listener will perform the transform to get the waypoint object from the camera frame to the world frame.
  * 5. The listener will publish the x,y positions to camera_#_<x/y> attributes.
- * 6. The feedback call back with send goal will nagivate the robot accordingh to the waypoints color order defined in the yaml file. 
+ * 6. The feedback call back works with send goal to nagivate the robot accordingh to the waypoints defined in the yaml file. 
  */
 class RobotTargetClient : public rclcpp::Node {
    public:
