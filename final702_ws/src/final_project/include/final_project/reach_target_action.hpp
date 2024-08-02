@@ -24,7 +24,7 @@ using namespace std::chrono_literals;
 using RobotTarget = mage_msgs::action::RobotTarget;
 using GoalHandle = rclcpp_action::ClientGoalHandle<RobotTarget>;
 /**
- * @brief This class includes the methods and attributes for all camera, broadcaster, and listener callbacks. 
+ * @brief This class includes the methods and attributes for all camera, feedback, broadcaster, and listener callbacks. 
  * 1. Camera messages will be subscribed to through camera_#_sub.
  * 2. This data will be placed in a map, target_map.
  * 3. The Broadcaster calls on this map infomation with a key look up and broadcasts to the tf listener.
